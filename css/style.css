@@ -79,7 +79,7 @@ section {
 
 /* Hero Section */
 .hero-section {
-  background-image: url("/images/hero-background.png"); /* Use the provided blob URL */
+  background-image: url("/images/hero-background.png");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -87,7 +87,11 @@ section {
   padding: 8rem 2rem;
   position: relative;
   overflow: hidden;
-  min-height: 600px; /* Ensure enough height for content */
+  min-height: 600px;
+  display: flex; /* Add flex to center content */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
@@ -95,12 +99,22 @@ section {
   z-index: 1;
   max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.site-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.theme-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title {
@@ -109,16 +123,15 @@ section {
   margin-bottom: 1rem;
   line-height: 1;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-  /* Mimic the multi-color effect from the screenshot */
   background: linear-gradient(to right, #ff0000, #0000ff, #ffff00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-dates {
-  font-size: 3rem;
+  font-size: 2rem; /* Adjusted from 3rem to fit better with new titles */
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -135,21 +148,11 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.news-date {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
 .hero-characters {
   position: absolute;
   right: 2rem;
   bottom: 2rem;
-  width: 200px; /* Adjust size as needed */
-}
-
-.hero-characters img {
-  width: 100%;
-  height: auto;
+  width: 200px;
 }
 
 /* PICKUP Section */
@@ -282,6 +285,7 @@ section {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  margin-top: 1.5rem; /* Add some top margin */
 }
 
 .plan_group,
@@ -358,10 +362,15 @@ footer h5 {
     font-size: 3rem;
   }
 
-  .hero-dates {
-    font-size: 2rem;
+  .site-title {
+    font-size: 1.8rem;
   }
-
+  .theme-subtitle {
+    font-size: 1.2rem;
+  }
+  .hero-dates {
+    font-size: 1.5rem;
+  }
   .news-box {
     position: static;
     margin: 1rem auto;
@@ -387,11 +396,15 @@ footer h5 {
   .hero-title {
     font-size: 2.5rem;
   }
-
-  .hero-dates {
+  .site-title {
     font-size: 1.5rem;
   }
-
+  .theme-subtitle {
+    font-size: 1rem;
+  }
+  .hero-dates {
+    font-size: 1.2rem;
+  }
   .pickup-section h2,
   .zen-university-section h2,
   .detail h2,
