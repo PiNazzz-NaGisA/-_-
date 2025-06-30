@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet" // Sheetコンポーネントをインポート
+import { MenuIcon } from "lucide-react" // ハンバーガーアイコンをインポート
 
 export function Header() {
   useSmoothScroll()
@@ -34,9 +36,49 @@ export function Header() {
             注意事項
           </Link>
         </nav>
-        <Button variant="outline" className="md:hidden bg-transparent">
-          Menu
-        </Button>
+        {/* モバイル用メニューボタン */}
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon" className="md:hidden bg-transparent">
+              <MenuIcon className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[250px] sm:w-[300px] p-6">
+            <nav className="flex flex-col gap-4">
+              <Link href="#top" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
+                TOP
+              </Link>
+              <Link
+                href="#overview"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}
+              >
+                開催概要
+              </Link>
+              <Link href="#about" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
+                キャンフェスとは
+              </Link>
+              <Link href="#plans" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
+                企画紹介
+              </Link>
+              <Link
+                href="#timetable"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}
+              >
+                ステージタイムテーブル
+              </Link>
+              <Link
+                href="#precautions"
+                className="text-lg font-medium hover:underline underline-offset-4"
+                prefetch={false}
+              >
+                注意事項
+              </Link>
+            </nav>
+          </SheetContent>
+        </Sheet>
       </div>
     </header>
   )
