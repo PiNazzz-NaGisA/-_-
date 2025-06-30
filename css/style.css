@@ -135,18 +135,7 @@ section {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.news-box {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 1rem;
-  border-radius: 8px;
-  position: absolute;
-  left: 2rem;
-  bottom: 2rem;
-  text-align: left;
-  width: 250px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+/* Removed .news-box styles */
 
 .hero-characters {
   position: absolute;
@@ -344,14 +333,10 @@ footer h5 {
   .theme-subtitle {
     font-size: 1.2rem;
   }
-  .hero-dates {
+  .event-date {
     font-size: 1.5rem;
   }
-  .news-box {
-    position: static;
-    margin: 1rem auto;
-    width: 90%;
-  }
+  /* Removed .news-box responsive styles */
 
   .hero-characters {
     position: static;
@@ -378,11 +363,10 @@ footer h5 {
   .theme-subtitle {
     font-size: 1rem;
   }
-  .hero-dates {
+  .event-date {
     font-size: 1.2rem;
   }
   .pickup-section h2,
-  .zen-university-section h2,
   .detail h2,
   .how_to_campus_festival h2,
   .plan_introduction h2,
