@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 max-w-screen-xl mx-auto w-full">
+        {" "}
+        {/* ここにmax-w-screen-xlとmx-autoを追加 */}
         {/* キャンフェスサイトのメインタイトル */}
         <HeroSection />
-
         {/* 今年のテーマ */}
         <ThemeSection />
-
         {/* 開催概要と開催日時 */}
         <ContentSection id="overview" title="開催概要" className="bg-white shadow-sm rounded-lg mx-4 my-8">
           <p className="text-center text-xl font-medium">
@@ -26,7 +26,6 @@ export default function Home() {
             ＠N/S/R高福岡薬院キャンパス
           </p>
         </ContentSection>
-
         <ContentSection id="about" title="キャンフェスとは" className="bg-gray-50 shadow-sm rounded-lg mx-4 my-8">
           <p>
             いるか知らんけどなんか書いていいんじゃない？文言は偉い人に考えて書いてもううとか？
@@ -35,9 +34,7 @@ export default function Home() {
             今年は「福岡薬院万博」をテーマに、未来への希望と創造性を表現します。
           </p>
         </ContentSection>
-
         <PickupSection />
-
         <ContentSection
           id="timetable"
           title="ステージタイムテーブル"
@@ -49,7 +46,6 @@ export default function Home() {
             <p>詳細が決まり次第、こちらで公開いたしますので、今しばらくお待ちください。</p>
           </div>
         </ContentSection>
-
         <ContentSection id="precautions" title="注意事項" className="bg-gray-50 shadow-sm rounded-lg mx-4 my-8">
           <ul className="list-disc list-inside">
             <li>駐車場のご用意がございません、近隣のコインパーキングや公共交通機関をご利用ください。</li>
