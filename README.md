@@ -28,3 +28,14 @@ Continue building your app on:
 2. Deploy your chats from the v0 interface
 3. Changes are automatically pushed to this repository
 4. Vercel deploys the latest version from this repository
+
+## Backend API
+
+This project now includes simple API routes implemented with Next.js.
+
+- `GET /api/events` - Retrieve a list of festival events.
+- `POST /api/events` - Add a new event.
+- `GET /api/contact` - Retrieve submitted contact messages.
+- `POST /api/contact` - Submit a new contact message.
+
+These endpoints use in-memory data storage and are intended for demonstration.
