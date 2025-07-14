@@ -1,19 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Smooth scrolling for navigation links
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll("a.nav-link").forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault()
-
       const targetId = this.getAttribute("href")
       const targetElement = document.querySelector(targetId)
-
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - (document.querySelector(".header")?.offsetHeight || 0), // Adjust for fixed header
+          top: targetElement.offsetTop - document.querySelector(".header").offsetHeight, // Adjust for fixed header
           behavior: "smooth",
         })
       }
-
       // Close mobile menu if open
       const mobileMenu = document.querySelector(".mobile-menu-overlay")
       if (mobileMenu && mobileMenu.classList.contains("is-open")) {
@@ -27,58 +24,57 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuClose = document.querySelector(".menu-close")
   const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay")
 
-  if (menuToggle && mobileMenuOverlay) {
+  if (menuToggle) {
     menuToggle.addEventListener("click", () => {
       mobileMenuOverlay.classList.add("is-open")
     })
   }
 
-  if (menuClose && mobileMenuOverlay) {
+  if (menuClose) {
     menuClose.addEventListener("click", () => {
       mobileMenuOverlay.classList.remove("is-open")
     })
   }
 
-  // Example of fetching data from a backend API
-  // This assumes your Next.js API routes are still running or you have a similar backend.
+  // Close mobile menu when clicking outside (optional, but good UX)
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener("click", (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove("is-open")
+      }
+    })
+  }
+
+  // Fetch events data (example of interacting with a backend API)
   async function fetchEvents() {
+    const eventsListDiv = document.getElementById("events-list")
+    if (!eventsListDiv) return
+
     try {
-      const response = await fetch("/api/events") // Adjust URL if your backend is elsewhere
+      // Assuming /api/events is still running as a Next.js API route or similar backend
+      const response = await fetch("/api/events")
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
       const events = await response.json()
-      const eventsListDiv = document.getElementById("events-list")
-      if (eventsListDiv) {
-        eventsListDiv.innerHTML = "" // Clear "Loading..." message
-        if (events.length > 0) {
-          events.forEach((event) => {
-            const eventElement = document.createElement("div")
-            eventElement.className = "event-item" // Add a class for styling if needed
-            eventElement.innerHTML = `
-                            <h3>${event.name}</h3>
-                            <p>${event.date} - ${event.time}</p>
-                            <p>${event.description}</p>
-                        `
-            eventsListDiv.appendChild(eventElement)
-          })
-        } else {
-          eventsListDiv.innerHTML = "<p>現在、イベント情報はありません。</p>"
-        }
+
+      if (events.length > 0) {
+        eventsListDiv.innerHTML =
+          "<h3>開催イベント一覧:</h3><ul>" +
+          events.map((event) => `<li>${event.name} - ${event.date} (${event.time})</li>`).join("") +
+          "</ul>"
+      } else {
+        eventsListDiv.innerHTML = "<p>現在、開催予定のイベントはありません。</p>"
       }
     } catch (error) {
-      console.error("イベント情報の取得に失敗しました:", error)
-      const eventsListDiv = document.getElementById("events-list")
-      if (eventsListDiv) {
-        eventsListDiv.innerHTML = "<p>イベント情報の読み込み中にエラーが発生しました。</p>"
-      }
+      console.error("イベントデータの取得に失敗しました:", error)
+      eventsListDiv.innerHTML = "<p>イベント情報の読み込み中にエラーが発生しました。</p>"
     }
   }
 
-  // Call fetchEvents when the page loads
   fetchEvents()
 
-  // Handle contact form submission
+  // Handle contact form submission (example)
   const contactForm = document.querySelector(".contact-form")
   if (contactForm) {
     contactForm.addEventListener("submit", async (e) => {
@@ -88,8 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = Object.fromEntries(formData.entries())
 
       try {
+        // Assuming /api/contact is still running as a Next.js API route or similar backend
         const response = await fetch("/api/contact", {
-          // Adjust URL if your backend is elsewhere
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -104,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
           alert("お問い合わせの送信に失敗しました。")
         }
       } catch (error) {
-        console.error("お問い合わせの送信中にエラーが発生しました:", error)
+        console.error("フォーム送信エラー:", error)
         alert("お問い合わせの送信中にエラーが発生しました。")
       }
     })
