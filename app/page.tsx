@@ -26,14 +26,7 @@ export default function Home() {
             ＠N/S/R高福岡薬院キャンパス
           </p>
         </ContentSection>
-        <ContentSection id="about" title="キャンフェスとは" className="bg-gray-50 shadow-sm rounded-lg mx-4 my-8">
-          <p>
-            いるか知らんけどなんか書いていいんじゃない？文言は偉い人に考えて書いてもううとか？
-            キャンフェスは、学生たちが日頃の成果を発表し、来場者と共に楽しむことができる年に一度の祭典です。
-            様々な企画や展示、ステージパフォーマンスを通じて、学生と地域社会の交流を深めることを目的としています。
-            今年は「福岡薬院万博」をテーマに、未来への希望と創造性を表現します。
-          </p>
-        </ContentSection>
+        {/* 「キャンフェスとは」セクションを削除しました */}
         <PickupSection />
         <ContentSection
           id="timetable"
