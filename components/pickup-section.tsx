@@ -1,7 +1,7 @@
 import type React from "react"
 import { Card } from "@/components/ui/card"
 
-const PickupSection: React.FC = () => {
+export const PickupSection: React.FC = () => {
   return (
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto text-center">
@@ -86,5 +86,3 @@ const PickupSection: React.FC = () => {
     </section>
   )
 }
-
-export default PickupSection
