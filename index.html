@@ -1,209 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>福岡薬院万博(キャンフェス）</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script>
-    (function(d) {
-      var config = {
-          kitId: 'ate1cnz',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薬院キャンフェス</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <div class="header-content">
-      <div class="logo">
-        <img src="/placeholder.svg?height=30&width=100" alt="N高等学校・S高等学校 ZENKAI">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#hero">TOP</a></li>
-          <li><a href="#detail">開催概要</a></li>
-          <li><a href="#pickup">企画・展示</a></li>
-          <li><a href="#real-venue">リアル会場</a></li>
-          <li><a href="#support">寄付・協賛</a></li>
-        </ul>
-      </nav>
-      <button class="ticket-button">入場券販売</button>
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="/placeholder-logo.svg" alt="薬院キャンフェスロゴ" class="logo-image">
+                <span class="logo-text">薬院キャンフェス</span>
+            </div>
+            <nav class="nav-desktop">
+                <a href="#hero" class="nav-link">ホーム</a>
+                <a href="#theme" class="nav-link">テーマ</a>
+                <a href="#events" class="nav-link">イベント</a>
+                <a href="#pickup" class="nav-link">ピックアップ</a>
+                <a href="#contact" class="nav-link">お問い合わせ</a>
+            </nav>
+            <button class="menu-toggle" aria-label="メニューを開く">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-title">メニュー</span>
+            <button class="menu-close" aria-label="メニューを閉じる">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+        <nav class="nav-mobile">
+            <a href="#hero" class="nav-link mobile-nav-link">ホーム</a>
+            <a href="#theme" class="nav-link mobile-nav-link">テーマ</a>
+            <a href="#events" class="nav-link mobile-nav-link">イベント</a>
+            <a href="#pickup" class="nav-link mobile-nav-link">ピックアップ</a>
+            <a href="#contact" class="nav-link mobile-nav-link">お問い合わせ</a>
+        </nav>
     </div>
-  </header>
 
-  <main>
-    <section id="hero" class="hero-section">
-      <div class="hero-content">
-        <h1 class="site-title">福岡薬院キャンフェスサイト</h1>
-        <p class="theme-subtitle">今年のキャンフェステーマは</p>
-        <h2 class="main-event-title">福岡薬院万博</h2>
-        <p class="theme-subtitle">になりました！！</p>
-        <p class="event-date">2025年9月20日(土)</p>
-        <div class="hero-characters">
-          <img src="/images/hero-characters.png" alt="Hero Characters">
-        </div>
-      </div>
-    </section>
-
-    <section id="pickup" class="pickup-section">
-      <h2>PICKUP</h2>
-      <div class="pickup-grid">
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="射的">
-          <div class="card-content">
-            <h3>射的</h3>
-            <p>企画班による楽しい射的ゲーム！</p>
-            <div class="tags">
-              <span>企画班</span>
-              <span>ゲーム</span>
+    <main class="main-content">
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">薬院キャンフェス</h1>
+                <p class="hero-subtitle">2024年10月26日(土)・27日(日) 10:00 - 17:00</p>
             </div>
-          </div>
-        </div>
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="フォトブース">
-          <div class="card-content">
-            <h3>フォトブース</h3>
-            <p>思い出に残る写真を撮ろう！</p>
-            <div class="tags">
-              <span>企画班</span>
-              <span>体験</span>
+        </section>
+
+        <section id="theme" class="theme-section">
+            <div class="container">
+                <h2 class="section-title">今年のテーマ</h2>
+                <p class="theme-description">
+                    今年の薬院キャンフェスは「未来への扉」をテーマに開催されます。
+                    テクノロジーとアートが融合した展示や、地域社会との連携を深める企画など、
+                    来場者の皆様に新たな発見と感動を提供します。
+                    未来を創造する学生たちの情熱と創造性をぜひご体験ください。
+                </p>
             </div>
-          </div>
-        </div>
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="プロジェクションマッピング">
-          <div class="card-content">
-            <h3>プロジェクションマッピング</h3>
-            <p>幻想的な光のショーをお楽しみください。</p>
-            <div class="tags">
-              <span>企画班</span>
-              <span>ショー</span>
+        </section>
+
+        <section id="events" class="content-section">
+            <div class="container">
+                <h2 class="section-title">イベント概要</h2>
+                <p class="content-text">
+                    薬院キャンフェスは、学生たちの創造性と情熱が詰まった年に一度の祭典です。
+                    今年は、最新のテクノロジーを体験できるインタラクティブな展示や、
+                    学生アーティストによるライブパフォーマンス、地域のお店が出店するフードブースなど、
+                    多岐にわたる企画をご用意しています。
+                    ご家族、ご友人と一緒に、忘れられない一日をお過ごしください。
+                </p>
+                <div id="events-list" class="events-list">
+                    <!-- イベントデータがここに動的に挿入されます -->
+                    <p>イベント情報を読み込み中...</p>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="パンケーキ">
-          <div class="card-content">
-            <h3>パンケーキ</h3>
-            <p>ふわふわの美味しいパンケーキ！</p>
-            <div class="tags">
-              <span>物販</span>
-              <span>フード</span>
+        </section>
+
+        <section id="pickup" class="pickup-section">
+            <div class="container">
+                <h2 class="section-title">ピックアップ企画</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="企画1" class="card-image">
+                        <h3 class="card-title">AIアート体験</h3>
+                        <p class="card-description">最新のAI技術を使って、あなただけのオリジナルアートを生成してみよう！</p>
+                    </div>
+                    <div class="card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="企画2" class="card-image">
+                        <h3 class="card-title">VRゲームラボ</h3>
+                        <p class="card-description">没入感あふれるVRゲームの世界を体験！友達と対戦も可能。</p>
+                    </div>
+                    <div class="card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="企画3" class="card-image">
+                        <h3 class="card-title">学生バンドライブ</h3>
+                        <p class="card-description">熱気あふれる学生バンドのライブパフォーマンスで盛り上がろう！</p>
+                    </div>
+                    <div class="card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="企画4" class="card-image">
+                        <h3 class="card-title">地域グルメフェス</h3>
+                        <p class="card-description">地元の人気店が集結！美味しいフードとドリンクを楽しもう。</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="わらび餅ドリンク">
-          <div class="card-content">
-            <h3>わらび餅ドリンク</h3>
-            <p>ひんやり美味しいわらび餅ドリンク！</p>
-            <div class="tags">
-              <span>物販</span>
-              <span>ドリンク</span>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="content-text">
+                    薬院キャンフェスに関するご質問やお問い合わせは、以下のフォームよりご連絡ください。
+                    皆様からのご連絡をお待ちしております。
+                </p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">お問い合わせ内容</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">送信</button>
+                </form>
             </div>
-          </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 薬院キャンフェス実行委員会. All rights reserved.</p>
+            <p>福岡薬院万博広報部門web班</p>
         </div>
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="週3物販">
-          <div class="card-content">
-            <h3>週3物販</h3>
-            <p>週3回限定の特別物販！</p>
-            <div class="tags">
-              <span>物販</span>
-              <span>限定</span>
-            </div>
-          </div>
-        </div>
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="週1物販">
-          <div class="card-content">
-            <h3>週1物販</h3>
-            <p>週1回限定のレアアイテム！</p>
-            <div class="tags">
-              <span>物販</span>
-              <span>限定</span>
-            </div>
-          </div>
-        </div>
-        <div class="pickup-card">
-          <img src="/placeholder.svg?height=200&width=300" alt="ステージ">
-          <div class="card-content">
-            <h3>ステージ</h3>
-            <p>ComingSoon</p>
-            <div class="tags">
-              <span>ステージ</span>
-              <span>パフォーマンス</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="view-all-button">企画一覧をみる →</button>
-    </section>
+    </footer>
 
-    <section id="detail" class="detail">
-      <h2>開催概要</h2>
-      <h3>2025年9月20日(土)<br>オープニング12:00(開場11:30)<br>＠N/S/R高福岡薬院キャンパス</h3>
-    </section>
-
-    <section id="how-to-campus-festival" class="how_to_campus_festival">
-      <h2>キャンフェスとは</h2>
-      <p>いるか知らんけどなんか書いていいんじゃない？文言は偉い人に考えて書いてもううとか？</p>
-    </section>
-
-    <section id="plan-introduction" class="plan_introduction">
-      <h2>企画紹介</h2>
-      <div class="plan-groups">
-        <div class="plan_group">
-          <h4>企画班</h4>
-          <ul>
-            <li>射的</li>
-            <li>フォトブース</li>
-            <li>プロジェクションマッピング</li>
-          </ul>
-        </div>
-        <div class="sell_group">
-          <h4>物販</h4>
-          <ul>
-            <li>パンケーキ</li>
-            <li>わらび餅ドリンク</li>
-            <li>週3物販</li>
-            <li>週1物販</li>
-          </ul>
-        </div>
-        <div class="stage_group">
-          <h4>ステージ</h4>
-          <ul>
-            <li>ComingSoon</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="time-table" class="time_tabel">
-      <h2>ステージタイムテーブル</h2>
-      <p>タイムテーブル作れ</p>
-    </section>
-
-    <section id="precautions" class="precautions">
-      <h2>注意事項</h2>
-      <ul>
-        <li>駐車場のご用意がございません、近隣のコインパーキングや公共交通機関をご利用ください</li>
-        <!--注意事項は要確認-->
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <h5>制作：福岡薬院万博広報部門web班</h5>
-  </footer>
-
-  <script src="js/app.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
