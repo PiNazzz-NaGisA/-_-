@@ -1,86 +1,90 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowRightIcon } from "lucide-react"
+import type React from "react"
+import { Card } from "@/components/ui/card"
 
-export function PickupSection() {
-  const plans = [
-    {
-      title: "射的",
-      description: "企画班",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["企画班", "ゲーム"],
-    },
-    {
-      title: "フォトブース",
-      description: "企画班",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["企画班", "写真"],
-    },
-    {
-      title: "プロジェクションマッピング",
-      description: "企画班",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["企画班", "アート"],
-    },
-    {
-      title: "パンケーキ",
-      description: "物販",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["物販", "フード"],
-    },
-    {
-      title: "わらび餅ドリンク",
-      description: "物販",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["物販", "ドリンク"],
-    },
-    {
-      title: "週3物販",
-      description: "物販",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["物販", "その他"],
-    },
-  ]
-
+const PickupSection: React.FC = () => {
   return (
-    <section id="plans" className="py-12 md:py-20 bg-gray-50">
-      <div className="container px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">企画紹介</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {plans.map((plan, index) => (
-            <Card
-              key={index}
-              className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={plan.image || "/placeholder.svg"}
-                alt={plan.title}
-                width={400}
-                height={250}
-                className="w-full h-48 object-cover"
-              />
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold">{plan.title}</CardTitle>
-                <CardDescription className="text-gray-600">{plan.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-wrap gap-2 mt-auto">
-                {plan.tags.map((tag, tagIndex) => (
-                  <span key={tagIndex} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                    {tag}
-                  </span>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <Button variant="outline" className="group bg-transparent">
-            企画一覧をみる
-            <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
+    <section className="py-12 bg-gray-50">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">注目の企画</h2>
+        <p className="text-gray-700 mb-8">文化祭をさらに盛り上げる、おすすめの企画をご紹介します。</p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="射的企画班"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">射的企画班</h3>
+            <p className="text-gray-600 text-sm">伝統的な射的ゲームで腕試し！豪華景品をゲットしよう。</p>
+          </Card>
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="企画班ゲーム"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">企画班ゲーム</h3>
+            <p className="text-gray-600 text-sm">企画班が考案したユニークなゲームで友達と盛り上がろう！</p>
+          </Card>
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="フォトブース企画班"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">フォトブース企画班</h3>
+            <p className="text-gray-600 text-sm">思い出に残る写真を撮ろう！楽しい背景や小道具を用意しています。</p>
+          </Card>
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="プロジェクションマッピング企画班"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">プロジェクションマッピング企画班</h3>
+            <p className="text-gray-600 text-sm">幻想的な光と映像のアートを体験！夜のキャンパスを彩ります。</p>
+          </Card>
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="パンケーキ物販"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">パンケーキ物販</h3>
+            <p className="text-gray-600 text-sm">ふわふわの美味しいパンケーキを販売！休憩にどうぞ。</p>
+          </Card>
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="わらび餅ドリンク物販"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">わらび餅ドリンク物販</h3>
+            <p className="text-gray-600 text-sm">ひんやり美味しいわらび餅と、様々なドリンクをご用意！</p>
+          </Card>
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="週3物販"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">週3物販</h3>
+            <p className="text-gray-600 text-sm">週3回限定の特別物販！お見逃しなく。</p>
+          </Card>
+          <Card className="flex flex-col items-center p-6 text-left">
+            <img
+              src="/placeholder.svg?height=200&width=300"
+              alt="その他企画一覧をみる"
+              className="w-full h-48 object-cover rounded-md mb-4"
+            />
+            <h3 className="text-xl font-bold mb-2">その他企画一覧をみる</h3>
+            <p className="text-gray-600 text-sm">全ての企画はこちらでチェック！</p>
+          </Card>
         </div>
       </div>
     </section>
   )
 }
+
+export default PickupSection
