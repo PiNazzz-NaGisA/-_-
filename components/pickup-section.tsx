@@ -18,35 +18,35 @@ export function PickupSection() {
       description: "企画班",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["企画班", "写真"],
-      href: null,
+      href: "/plans/photobooth",
     },
     {
       title: "プロジェクションマッピング",
       description: "企画班",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["企画班", "アート"],
-      href: null,
+      href: "/plans/projection",
     },
     {
       title: "パンケーキ",
       description: "物販",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["物販", "フード"],
-      href: null,
+      href: "/plans/pancake",
     },
     {
       title: "わらび餅ドリンク",
       description: "物販",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["物販", "ドリンク"],
-      href: null,
+      href: "/plans/warabimochi",
     },
     {
       title: "週3物販",
       description: "物販",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["物販", "その他"],
-      href: null,
+      href: "/plans/weekly3",
     },
   ]
 
@@ -59,9 +59,7 @@ export function PickupSection() {
             const CardComponent = (
               <Card
                 key={index}
-                className={`flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ${
-                  plan.href ? "cursor-pointer hover:scale-105 transform transition-transform" : ""
-                }`}
+                className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 transform"
               >
                 <Image
                   src={plan.image || "/placeholder.svg"}
@@ -87,12 +85,10 @@ export function PickupSection() {
               </Card>
             )
 
-            return plan.href ? (
+            return (
               <Link key={index} href={plan.href}>
                 {CardComponent}
               </Link>
-            ) : (
-              CardComponent
             )
           })}
         </div>
