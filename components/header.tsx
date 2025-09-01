@@ -23,9 +23,6 @@ export function Header() {
           <Link href="#overview" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             開催概要
           </Link>
-          <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            キャンフェスとは
-          </Link>
           <Link href="#plans" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             企画紹介
           </Link>
@@ -55,9 +52,6 @@ export function Header() {
                 prefetch={false}
               >
                 開催概要
-              </Link>
-              <Link href="#about" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-                キャンフェスとは
               </Link>
               <Link href="#plans" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
                 企画紹介

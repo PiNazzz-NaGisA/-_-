@@ -11,26 +11,22 @@ export function useSmoothScroll() {
         const hash = url.hash
 
         // 空のハッシュや無効なハッシュをチェック
-        if (!hash || hash === "#" || hash.length <= 1) {
+        if (!hash || hash.length <= 1) {
           return
         }
 
-        // 同じページ内のリンクかチェック
-        if (url.pathname === window.location.pathname) {
-          e.preventDefault()
-
-          try {
-            const element = document.querySelector(hash)
-            if (element) {
-              element.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              })
-            }
-          } catch (error) {
-            // 無効なセレクターの場合はエラーをキャッチして何もしない
-            console.warn("Invalid selector:", hash)
+        try {
+          const element = document.querySelector(hash)
+          if (element && url.pathname === window.location.pathname) {
+            e.preventDefault()
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
           }
+        } catch (error) {
+          // 無効なセレクターの場合はエラーをキャッチして何もしない
+          console.warn("Invalid selector:", hash)
         }
       }
     }
