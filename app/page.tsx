@@ -10,8 +10,6 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 max-w-screen-xl mx-auto w-full">
-        {" "}
-        {/* ここにmax-w-screen-xlとmx-autoを追加 */}
         {/* キャンフェスサイトのメインタイトル */}
         <HeroSection />
         {/* 今年のテーマ */}
@@ -26,7 +24,7 @@ export default function Home() {
             ＠N/S/R高福岡薬院キャンパス
           </p>
         </ContentSection>
-        {/* 「キャンフェスとは」セクションを削除しました */}
+        {/* 企画紹介セクション */}
         <PickupSection />
         <ContentSection
           id="timetable"
