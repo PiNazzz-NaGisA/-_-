@@ -41,13 +41,62 @@ export function PickupSection() {
       tags: ["物販", "ワークショップ", "体験"],
       href: "/plans/weekly1-workshop",
     },
+    {
+      title: "NED in 福岡薬院万博2025",
+      description: "特別企画",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["特別企画", "地域交流"],
+      href: "/plans/ned-fukuoka",
+    },
+    {
+      title: "倉本さんのお悩み相談室",
+      description: "相談・交流",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["相談", "交流", "人生"],
+      href: "/plans/kuramoto-consultation",
+    },
+    {
+      title: "コミュニケーションサークル発表",
+      description: "発表・交流",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["発表", "コミュニケーション"],
+      href: "/plans/communication-circle",
+    },
+    {
+      title: "カラオケ大会 ~ in 福岡薬院 ~",
+      description: "エンターテイメント",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["音楽", "大会", "エンタメ"],
+      href: "/plans/karaoke-contest",
+    },
+    {
+      title: "第1回福岡薬院クイズ王決定戦",
+      description: "クイズ大会",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["クイズ", "大会", "知識"],
+      href: "/plans/quiz-contest",
+    },
+    {
+      title: "薬院老人会によるバンド演奏",
+      description: "音楽・演奏",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["音楽", "バンド", "世代交流"],
+      href: "/plans/senior-band",
+    },
+    {
+      title: "爆破しうる潜水艇からの脱出",
+      description: "脱出ゲーム",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["脱出ゲーム", "謎解き", "チームワーク"],
+      href: "/plans/submarine-escape",
+    },
   ]
 
   return (
     <section id="plans" className="py-12 md:py-20 bg-gray-50">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">企画紹介</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {plans.map((plan, index) => {
             const CardComponent = (
               <Card
