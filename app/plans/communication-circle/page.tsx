@@ -1,9 +1,7 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, MapPinIcon, UsersIcon } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { ArrowLeft, MapPin, Clock, Users } from "lucide-react"
 
 export default function CommunicationCirclePage() {
   return (
@@ -12,86 +10,71 @@ export default function CommunicationCirclePage() {
         <div className="mb-6">
           <Link href="/#plans">
             <Button variant="outline" className="mb-4 bg-transparent">
-              <ArrowLeftIcon className="mr-2 h-4 w-4" />
+              <ArrowLeft className="mr-2 h-4 w-4" />
               企画一覧に戻る
             </Button>
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="コミュニケーションサークル発表"
-              width={600}
-              height={400}
-              className="w-full h-64 lg:h-96 object-cover rounded-lg shadow-lg"
-            />
-          </div>
-
-          <div className="space-y-6">
-            <div>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <Badge variant="secondary">発表</Badge>
-                <Badge variant="secondary">コミュニケーション</Badge>
-              </div>
-              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">コミュニケーションサークル発表</h1>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                地域のコミュニケーションサークルメンバーによる発表会です。
-                スピーチ、プレゼンテーション、ディスカッションなど、様々な形式で交流を深めます。
-              </p>
+        <Card className="max-w-4xl mx-auto">
+          <CardHeader>
+            <CardTitle className="text-3xl font-bold text-center">コミュニケーションサークル発表</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
+              <img
+                src="/placeholder.svg?height=400&width=600&text=コミュニケーションサークル発表"
+                alt="コミュニケーションサークル発表"
+                className="rounded-lg object-cover w-full h-full"
+              />
             </div>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <CalendarIcon className="mr-2 h-5 w-5" />
-                  開催情報
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center">
-                  <ClockIcon className="mr-2 h-4 w-4 text-gray-500" />
-                  <span>13:00 - 15:00</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPinIcon className="mr-2 h-4 w-4 text-gray-500" />
-                  <span>発表ホール</span>
-                </div>
-                <div className="flex items-center">
-                  <UsersIcon className="mr-2 h-4 w-4 text-gray-500" />
-                  <span>参加費無料・観覧自由</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-5 w-5 text-blue-600" />
+                <span>ステージエリア</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Clock className="h-5 w-5 text-green-600" />
+                <span>14:00-15:30</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="h-5 w-5 text-purple-600" />
+                <span>観覧自由</span>
+              </div>
+            </div>
 
-        <div className="mt-12">
-          <Card>
-            <CardHeader>
-              <CardTitle>企画詳細</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="prose max-w-none">
-                <h3>発表内容</h3>
-                <ul>
-                  <li>効果的なコミュニケーション術</li>
-                  <li>プレゼンテーションスキル向上法</li>
-                  <li>チームワークの重要性</li>
-                  <li>異文化コミュニケーション</li>
-                  <li>デジタル時代のコミュニケーション</li>
-                </ul>
+            <div className="prose max-w-none">
+              <h3>企画概要</h3>
+              <p>
+                コミュニケーションサークルのメンバーが日頃の活動成果を発表します。
+                スピーチ、プレゼンテーション、ディスカッションなど、多彩な発表をお楽しみください。
+              </p>
 
-                <h3>参加メリット</h3>
-                <p>
-                  コミュニケーション能力向上のヒントを得られるだけでなく、
-                  同じ志を持つ仲間との出会いの場としてもご活用いただけます。
+              <h3>発表内容</h3>
+              <ul>
+                <li>「効果的なプレゼンテーションの技術」</li>
+                <li>「異文化コミュニケーションの体験談」</li>
+                <li>「チームワークを高める方法」</li>
+                <li>「リーダーシップについて考える」</li>
+                <li>「コミュニケーション能力向上のコツ」</li>
+              </ul>
+
+              <h3>見どころ</h3>
+              <p>
+                実際のビジネスシーンや日常生活で役立つコミュニケーションスキルを、
+                実演を交えながら分かりやすく紹介します。質疑応答の時間もありますので、
+                気になることがあればお気軽にご質問ください。
+              </p>
+
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <p className="text-sm text-blue-800">
+                  <strong>参加特典：</strong>発表後に簡単なコミュニケーション診断シートをプレゼント！
                 </p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   )
