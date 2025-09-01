@@ -28,18 +28,11 @@ export function PickupSection() {
       href: "/plans/projection",
     },
     {
-      title: "パンケーキ",
+      title: "食品販売",
       description: "物販",
       image: "/placeholder.svg?height=200&width=300",
-      tags: ["物販", "フード"],
-      href: "/plans/pancake",
-    },
-    {
-      title: "わらび餅ドリンク",
-      description: "物販",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["物販", "ドリンク"],
-      href: "/plans/warabimochi",
+      tags: ["物販", "フード", "ドリンク"],
+      href: "/plans/food",
     },
     {
       title: "週3物販",
