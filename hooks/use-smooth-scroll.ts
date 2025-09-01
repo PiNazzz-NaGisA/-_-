@@ -4,38 +4,38 @@ import { useEffect } from "react"
 
 export function useSmoothScroll() {
   useEffect(() => {
-    const handleAnchorClick = (e: MouseEvent) => {
+    const handleAnchorClick = (e: Event) => {
       const target = e.target as HTMLAnchorElement
-      if (target.tagName === "A" && target.getAttribute("href")?.startsWith("#")) {
-        const href = target.getAttribute("href")
+      if (target.tagName === "A" && target.href) {
+        const url = new URL(target.href)
+        const hash = url.hash
 
-        // hrefが#のみの場合や空の場合は処理しない
-        if (!href || href === "#" || href.length <= 1) {
+        // 空のハッシュや無効なハッシュをチェック
+        if (!hash || hash === "#" || hash.length <= 1) {
           return
         }
 
-        e.preventDefault()
+        // 同じページ内のリンクかチェック
+        if (url.pathname === window.location.pathname) {
+          e.preventDefault()
 
-        try {
-          const element = document.querySelector(href)
-          if (element) {
-            const offset = 60 // Adjust this value based on your fixed header height
-            window.scrollTo({
-              top: element.getBoundingClientRect().top + window.scrollY - offset,
-              behavior: "smooth",
-            })
+          try {
+            const element = document.querySelector(hash)
+            if (element) {
+              element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })
+            }
+          } catch (error) {
+            // 無効なセレクターの場合はエラーをキャッチして何もしない
+            console.warn("Invalid selector:", hash)
           }
-        } catch (error) {
-          // 無効なセレクターの場合はエラーをキャッチして何もしない
-          console.warn(`Invalid selector: ${href}`)
         }
       }
     }
 
     document.addEventListener("click", handleAnchorClick)
-
-    return () => {
-      document.removeEventListener("click", handleAnchorClick)
-    }
+    return () => document.removeEventListener("click", handleAnchorClick)
   }, [])
 }
