@@ -1,68 +1,119 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Clock, Users } from "lucide-react"
+import { ArrowLeftIcon } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
-export default function NEDFukuokaPage() {
+export default function NedFukuokaPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Link href="/#plans">
-            <Button variant="outline" className="mb-4 bg-transparent">
-              <ArrowLeft className="mr-2 h-4 w-4" />
+            <Button variant="outline" className="group bg-transparent">
+              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
               企画一覧に戻る
             </Button>
           </Link>
         </div>
 
         <Card className="max-w-4xl mx-auto">
+          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
+            <Image
+              src="/placeholder.svg?height=400&width=800&text=NED+in+福岡薬院万博2025"
+              alt="NED in 福岡薬院万博2025"
+              width={800}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
           <CardHeader>
-            <CardTitle className="text-3xl font-bold text-center">NED in 福岡薬院万博2025</CardTitle>
+            <CardTitle className="text-3xl font-bold">NED in 福岡薬院万博2025</CardTitle>
+            <p className="text-lg text-gray-600">地域密着型の特別企画</p>
           </CardHeader>
+
           <CardContent className="space-y-6">
-            <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-              <img
-                src="/placeholder.svg?height=400&width=600&text=NED+in+福岡薬院万博2025"
-                alt="NED in 福岡薬院万博2025"
-                className="rounded-lg object-cover w-full h-full"
-              />
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-5 w-5 text-blue-600" />
-                <span>メイン会場</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="h-5 w-5 text-green-600" />
-                <span>13:00-15:00</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5 text-purple-600" />
-                <span>参加自由</span>
-              </div>
-            </div>
-
-            <div className="prose max-w-none">
-              <h3>企画概要</h3>
-              <p>
-                福岡薬院キャンパス初の万博形式イベント「NED in 福岡薬院万博2025」を開催します！
-                地域の魅力を再発見し、未来への可能性を探る特別企画です。
+            <div>
+              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
+              <p className="text-gray-700 leading-relaxed">
+                「NED（New Experience Design）in 福岡薬院万博2025」は、薬院地域の魅力を再発見し、
+                新しい体験をデザインする特別企画です。地域の歴史、文化、グルメ、人々との交流を通じて、
+                薬院の新たな一面を発見できる万博形式のイベントです。
               </p>
+            </div>
 
-              <h3>企画内容</h3>
-              <ul>
-                <li>地域の歴史と文化の展示</li>
-                <li>未来技術の体験コーナー</li>
-                <li>地域住民との交流ブース</li>
-                <li>薬院の魅力発信プレゼンテーション</li>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <ul className="space-y-2">
+                  <li>
+                    <strong>開催時間:</strong> 12:00 - 17:00
+                  </li>
+                  <li>
+                    <strong>場所:</strong> 校内各所（パビリオン形式）
+                  </li>
+                  <li>
+                    <strong>参加費:</strong> 無料
+                  </li>
+                  <li>
+                    <strong>対象:</strong> どなたでも参加可能
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">パビリオン紹介</h3>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded-lg border border-red-200">
+                  <h4 className="font-semibold text-red-600 mb-2">薬院歴史館</h4>
+                  <p className="text-sm text-gray-700">
+                    薬院地域の歴史を写真や資料で紹介。昔の薬院の様子から現在までの変遷を学べます。
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg border border-green-200">
+                  <h4 className="font-semibold text-green-600 mb-2">薬院グルメワールド</h4>
+                  <p className="text-sm text-gray-700">
+                    薬院周辺の名店グルメを試食できるコーナー。地域の美味しいお店を発見しよう！
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                  <h4 className="font-semibold text-blue-600 mb-2">未来の薬院デザイン室</h4>
+                  <p className="text-sm text-gray-700">
+                    参加者のアイデアで未来の薬院をデザイン。みんなで理想の街づくりを考えよう！
+                  </p>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg border border-purple-200">
+                  <h4 className="font-semibold text-purple-600 mb-2">薬院人物図鑑</h4>
+                  <p className="text-sm text-gray-700">
+                    地域で活躍する人々のインタビュー映像や、住民の方々との交流コーナー。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">特別イベント</h3>
+              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <h4 className="font-medium text-yellow-800 mb-2">薬院クイズラリー</h4>
+                <p className="text-sm text-yellow-700">
+                  各パビリオンを回ってクイズに答えよう！全問正解者には薬院オリジナルグッズをプレゼント。
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>各パビリオンは混雑状況により入場制限を行う場合があります</li>
+                <li>クイズラリーの景品は数に限りがあります</li>
+                <li>地域の方々との交流では、マナーを守ってご参加ください</li>
+                <li>写真撮影は許可された場所のみでお願いします</li>
               </ul>
-
-              <h3>参加方法</h3>
-              <p>
-                事前予約は不要です。当日会場にお越しください。 各ブースを自由に回って、薬院の魅力を体感してください。
-              </p>
             </div>
           </CardContent>
         </Card>

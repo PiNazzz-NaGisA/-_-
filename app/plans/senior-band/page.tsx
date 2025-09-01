@@ -1,7 +1,8 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, MapPin, Clock, Users } from "lucide-react"
+import { ArrowLeftIcon } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
 export default function SeniorBandPage() {
   return (
@@ -9,92 +10,156 @@ export default function SeniorBandPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Link href="/#plans">
-            <Button variant="outline" className="mb-4 bg-transparent">
-              <ArrowLeft className="mr-2 h-4 w-4" />
+            <Button variant="outline" className="group bg-transparent">
+              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
               企画一覧に戻る
             </Button>
           </Link>
         </div>
 
         <Card className="max-w-4xl mx-auto">
+          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
+            <Image
+              src="/placeholder.svg?height=400&width=800&text=薬院老人会バンド演奏"
+              alt="薬院老人会によるバンド演奏"
+              width={800}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
           <CardHeader>
-            <CardTitle className="text-3xl font-bold text-center">薬院老人会によるバンド演奏</CardTitle>
+            <CardTitle className="text-3xl font-bold">薬院老人会によるバンド演奏</CardTitle>
+            <p className="text-lg text-gray-600">地域の薬院老人会による心温まるバンド演奏</p>
           </CardHeader>
+
           <CardContent className="space-y-6">
-            <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-              <img
-                src="/placeholder.svg?height=400&width=600&text=薬院老人会バンド演奏"
-                alt="薬院老人会バンド演奏"
-                className="rounded-lg object-cover w-full h-full"
-              />
+            <div>
+              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
+              <p className="text-gray-700 leading-relaxed">
+                地域の薬院老人会の皆さんによる特別なバンド演奏です。
+                長年音楽を愛し続けてきたメンバーたちが、懐かしの名曲から現代の楽曲まで、
+                幅広いレパートリーで心温まる演奏をお届けします。世代を超えた音楽の素晴らしさを感じられる貴重な機会です。
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="flex items-center space-x-2">
-                <MapPin className="h-5 w-5 text-blue-600" />
-                <span>ステージエリア</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="h-5 w-5 text-green-600" />
-                <span>13:30-14:30</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5 text-purple-600" />
-                <span>観覧自由</span>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <ul className="space-y-2">
+                  <li>
+                    <strong>開催時間:</strong> 16:00 - 17:00
+                  </li>
+                  <li>
+                    <strong>場所:</strong> 中庭特設ステージ
+                  </li>
+                  <li>
+                    <strong>参加費:</strong> 無料
+                  </li>
+                  <li>
+                    <strong>対象:</strong> どなたでも観覧可能
+                  </li>
+                  <li>
+                    <strong>座席:</strong> 椅子席50席（先着順）
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div className="prose max-w-none">
-              <h3>企画概要</h3>
-              <p>
-                地域の薬院老人会の皆さんが結成したバンド「薬院シルバーサウンズ」による
-                特別演奏会を開催します。年齢を重ねても音楽への情熱は衰えない、
-                素晴らしいパフォーマンスをお楽しみください。
-              </p>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">バンドメンバー紹介</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold text-blue-600 mb-2">田中 一郎さん（75歳）</h4>
+                  <p className="text-sm text-gray-600 mb-1">ボーカル・ギター</p>
+                  <p className="text-xs text-gray-700">元音楽教師。50年以上のギター歴を持つベテランミュージシャン。</p>
+                </div>
 
-              <h3>演奏予定曲</h3>
-              <ul>
-                <li>「津軽海峡冬景色」- 石川さゆり</li>
-                <li>「贈る言葉」- 海援隊</li>
-                <li>「乾杯」- 乾杯</li>
-                <li>「青春」- 毛皮のマリーズ</li>
-                <li>「上を向いて歩こう」- 坂本九</li>
-                <li>「見上げてごらん夜の星を」- 坂本九</li>
-                <li>オリジナル楽曲「薬院の四季」</li>
-              </ul>
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold text-green-600 mb-2">佐藤 花子さん（68歳）</h4>
+                  <p className="text-sm text-gray-600 mb-1">キーボード・コーラス</p>
+                  <p className="text-xs text-gray-700">元ピアノ講師。クラシックからポップスまで幅広くこなす。</p>
+                </div>
 
-              <h3>バンドメンバー紹介</h3>
-              <ul>
-                <li>
-                  <strong>田中さん（78歳）：</strong>ボーカル・ギター（元音楽教師）
-                </li>
-                <li>
-                  <strong>佐藤さん（72歳）：</strong>ベース（元ジャズ喫茶店主）
-                </li>
-                <li>
-                  <strong>山田さん（75歳）：</strong>ドラムス（元会社員、趣味歴50年）
-                </li>
-                <li>
-                  <strong>鈴木さん（70歳）：</strong>キーボード（元ピアノ講師）
-                </li>
-                <li>
-                  <strong>高橋さん（74歳）：</strong>ハーモニカ・コーラス（元合唱団員）
-                </li>
-              </ul>
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold text-purple-600 mb-2">山田 次郎さん（72歳）</h4>
+                  <p className="text-sm text-gray-600 mb-1">ベース</p>
+                  <p className="text-xs text-gray-700">若い頃はプロを目指していた実力派。安定したリズムが自慢。</p>
+                </div>
 
-              <h3>見どころ</h3>
-              <p>
-                長年培った音楽技術と人生経験が織りなす、心に響く演奏をお届けします。
-                世代を超えて愛される名曲の数々を、温かみのある演奏でお楽しみください。
-                演奏後には、メンバーとの交流タイムも予定しています。
-              </p>
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold text-orange-600 mb-2">鈴木 三郎さん（70歳）</h4>
+                  <p className="text-sm text-gray-600 mb-1">ドラムス</p>
+                  <p className="text-xs text-gray-700">60歳からドラムを始めた遅咲きの才能。パワフルな演奏が魅力。</p>
+                </div>
+              </div>
+            </div>
 
-              <div className="bg-orange-50 p-4 rounded-lg">
-                <p className="text-sm text-orange-800">
-                  <strong>特別企画：</strong>演奏後に観客の皆さんと一緒に「ふるさと」を
-                  合唱する時間を設けます。ぜひご一緒にお歌いください！
+            <div>
+              <h3 className="text-xl font-semibold mb-3">演奏予定曲目</h3>
+              <div className="space-y-3">
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold text-red-600 mb-2">第1部：懐かしの名曲（16:00-16:20）</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• 津軽海峡冬景色（石川さゆり）</li>
+                    <li>• 贈る言葉（海援隊）</li>
+                    <li>• 青春（毛皮のマリーズ）</li>
+                    <li>• 乾杯（長渕剛）</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold text-blue-600 mb-2">第2部：世代を超えた名曲（16:25-16:45）</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• 上野駅（森高千里）</li>
+                    <li>• 島唄（THE BOOM）</li>
+                    <li>• 夜空ノムコウ（SMAP）</li>
+                    <li>• 花（森山直太朗）</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold text-green-600 mb-2">第3部：みんなで歌おう（16:50-17:00）</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• ふるさと（文部省唱歌）</li>
+                    <li>• 見上げてごらん夜の星を（坂本九）</li>
+                  </ul>
+                  <p className="text-xs text-gray-600 mt-2">※観客の皆さんも一緒に歌っていただけます</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">薬院老人会について</h3>
+              <div className="bg-gray-50 p-4 rounded-lg">
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  薬院老人会は、薬院地域にお住まいの60歳以上の方々で構成される地域団体です。
+                  健康維持活動、文化活動、地域交流活動を通じて、生きがいのある充実した生活を送ることを目的としています。
+                  音楽活動は3年前から始まり、月2回の練習を重ねて今回の発表に至りました。
                 </p>
               </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">特別企画</h3>
+              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <h4 className="font-medium text-yellow-800 mb-2">世代交流セッション</h4>
+                <p className="text-sm text-yellow-700">
+                  演奏終了後、希望者は楽器に触れたり、メンバーの皆さんとお話しできる時間を設けています。
+                  音楽を通じた世代を超えた交流をお楽しみください。
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                <li>屋外での開催のため、天候により中止・変更の場合があります</li>
+                <li>椅子席は先着順です（立ち見も可能）</li>
+                <li>演奏中の録音・録画は許可制です</li>
+                <li>第3部では一緒に歌っていただけます</li>
+                <li>演奏後の交流時間は自由参加です</li>
+              </ul>
             </div>
           </CardContent>
         </Card>
