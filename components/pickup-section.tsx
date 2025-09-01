@@ -35,11 +35,11 @@ export function PickupSection() {
       href: "/plans/food",
     },
     {
-      title: "週3物販",
-      description: "物販",
+      title: "週1物販ワークショップ",
+      description: "物販・体験",
       image: "/placeholder.svg?height=200&width=300",
-      tags: ["物販", "その他"],
-      href: "/plans/weekly3",
+      tags: ["物販", "ワークショップ", "体験"],
+      href: "/plans/weekly1-workshop",
     },
   ]
 
