@@ -1,75 +1,60 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Menu } from "lucide-react"
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet" // Sheetコンポーネントをインポート
-import { MenuIcon } from "lucide-react" // ハンバーガーアイコンをインポート
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false)
   useSmoothScroll()
 
+  const navItems = [
+    { href: "#hero", label: "TOP" },
+    { href: "#overview", label: "開催概要" },
+    { href: "#pickup", label: "企画紹介" },
+    { href: "#schedule", label: "ステージタイムテーブル" },
+    { href: "#notes", label: "注意事項" },
+  ]
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/90 backdrop-blur-sm">
-      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="#" className="flex items-center gap-2 font-bold text-lg" prefetch={false}>
-          <span className="sr-only">福岡薬院キャンフェス</span>
-          福岡薬院キャンフェス
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
+          <span className="text-xl font-bold">福岡薬院キャンフェス</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          <Link href="#top" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            TOP
-          </Link>
-          <Link href="#overview" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            開催概要
-          </Link>
-          <Link href="#plans" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            企画紹介
-          </Link>
-          <Link href="#timetable" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            ステージタイムテーブル
-          </Link>
-          <Link href="#precautions" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            注意事項
-          </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center space-x-6">
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href} className="text-sm font-medium transition-colors hover:text-primary">
+              {item.label}
+            </Link>
+          ))}
         </nav>
-        {/* モバイル用メニューボタン */}
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden bg-transparent">
-              <MenuIcon className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
+
+        {/* Mobile Navigation */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild className="md:hidden">
+            <Button variant="ghost" size="icon">
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">メニューを開く</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[250px] sm:w-[300px] p-6">
-            <nav className="flex flex-col gap-4">
-              <Link href="#top" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-                TOP
-              </Link>
-              <Link
-                href="#overview"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}
-              >
-                開催概要
-              </Link>
-              <Link href="#plans" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-                企画紹介
-              </Link>
-              <Link
-                href="#timetable"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}
-              >
-                ステージタイムテーブル
-              </Link>
-              <Link
-                href="#precautions"
-                className="text-lg font-medium hover:underline underline-offset-4"
-                prefetch={false}
-              >
-                注意事項
-              </Link>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <nav className="flex flex-col space-y-4 mt-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-lg font-medium transition-colors hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
             </nav>
           </SheetContent>
         </Sheet>

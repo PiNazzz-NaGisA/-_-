@@ -6,27 +6,25 @@ export function useSmoothScroll() {
   useEffect(() => {
     const handleAnchorClick = (e: Event) => {
       const target = e.target as HTMLAnchorElement
-      if (target.tagName === "A" && target.href) {
-        const url = new URL(target.href)
-        const hash = url.hash
-
-        // 空のハッシュや無効なハッシュをチェック
-        if (!hash || hash.length <= 1) {
+      if (target.tagName === "A" && target.href.includes("#")) {
+        const href = target.getAttribute("href")
+        if (!href || href === "#" || href.length <= 1) {
           return
         }
 
         try {
-          const element = document.querySelector(hash)
-          if (element && url.pathname === window.location.pathname) {
+          const targetId = href.substring(1)
+          const targetElement = document.querySelector(`#${targetId}`)
+
+          if (targetElement) {
             e.preventDefault()
-            element.scrollIntoView({
+            targetElement.scrollIntoView({
               behavior: "smooth",
               block: "start",
             })
           }
         } catch (error) {
-          // 無効なセレクターの場合はエラーをキャッチして何もしない
-          console.warn("Invalid selector:", hash)
+          console.warn("Invalid selector:", href)
         }
       }
     }
