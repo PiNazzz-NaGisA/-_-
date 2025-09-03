@@ -46,13 +46,16 @@ export default function ShootingPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:30 - 16:00
+                    <strong>開催時間:</strong> 12:15 ~ 14:45
                   </li>
                   <li>
-                    <strong>場所:</strong> 1階エントランス
+                    <strong>場所:</strong> 中教室後方
                   </li>
                   <li>
-                    <strong>参加費:</strong> 1回 200円
+                    <strong>参加費:</strong> 1回 100円
+                  </li>
+                  <li>
+                    <strong>チケット販売場所:</strong> キャンパス入り口
                   </li>
                   <li>
                     <strong>対象:</strong> どなたでも参加可能
@@ -74,6 +77,7 @@ export default function ShootingPage() {
                 <li>安全のため、係員の指示に従ってください</li>
                 <li>小さなお子様は保護者の方と一緒にご参加ください</li>
                 <li>混雑時はお待ちいただく場合があります</li>
+                <li>チケットは事前にキャンパス入り口でお買い求めください</li>
               </ul>
             </div>
           </CardContent>

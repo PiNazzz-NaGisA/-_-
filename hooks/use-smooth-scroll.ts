@@ -12,19 +12,22 @@ export function useSmoothScroll() {
           return
         }
 
-        try {
-          const targetId = href.substring(1)
-          const targetElement = document.querySelector(`#${targetId}`)
+        const targetId = href.substring(1)
+        if (!targetId) {
+          return
+        }
 
-          if (targetElement) {
+        try {
+          const element = document.querySelector(`#${targetId}`)
+          if (element) {
             e.preventDefault()
-            targetElement.scrollIntoView({
+            element.scrollIntoView({
               behavior: "smooth",
               block: "start",
             })
           }
         } catch (error) {
-          console.warn("Invalid selector:", href)
+          console.warn("Invalid selector:", targetId)
         }
       }
     }
