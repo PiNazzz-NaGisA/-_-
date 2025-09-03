@@ -8,7 +8,7 @@ export function useSmoothScroll() {
       const target = e.target as HTMLAnchorElement
       if (target.tagName === "A" && target.href.includes("#")) {
         const href = target.getAttribute("href")
-        if (!href || href === "#" || href.length <= 1) {
+        if (!href || href.length <= 1 || href === "#") {
           return
         }
 

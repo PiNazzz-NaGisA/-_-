@@ -70,7 +70,7 @@ export function Header() {
         </Sheet>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-            <Link href="/" className="md:hidden">
+            <Link href="/" className="flex items-center space-x-2 md:hidden">
               <span className="font-bold">福岡薬院キャンフェス</span>
             </Link>
           </div>

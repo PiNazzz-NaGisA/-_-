@@ -55,10 +55,7 @@ export default function ShootingPage() {
                     <strong>参加費:</strong> 1回 100円
                   </li>
                   <li>
-                    <strong>チケット販売場所:</strong> キャンパス入り口
-                  </li>
-                  <li>
-                    <strong>対象:</strong> どなたでも参加可能
+                    <strong>チケット販売場所:</strong> キャンパス入り口にて販売中(数に限りがございます。)
                   </li>
                 </ul>
               </div>
