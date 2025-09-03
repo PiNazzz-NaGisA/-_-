@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+import Link from "next/link"
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll"
 
 export function Header() {
@@ -12,11 +12,11 @@ export function Header() {
   useSmoothScroll()
 
   const navItems = [
-    { href: "#hero", label: "TOP" },
+    { href: "#top", label: "TOP" },
     { href: "#overview", label: "開催概要" },
-    { href: "#pickup", label: "企画紹介" },
+    { href: "#plans", label: "企画紹介" },
     { href: "#schedule", label: "ステージタイムテーブル" },
-    { href: "#notes", label: "注意事項" },
+    { href: "#notice", label: "注意事項" },
   ]
 
   return (
@@ -45,7 +45,7 @@ export function Header() {
               className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
             >
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle Menu</span>
+              <span className="sr-only">メニューを開く</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
@@ -59,7 +59,7 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="transition-colors hover:text-foreground/80 text-foreground/60"
+                    className="text-foreground/60 transition-colors hover:text-foreground"
                   >
                     {item.label}
                   </Link>

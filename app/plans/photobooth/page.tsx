@@ -20,8 +20,8 @@ export default function PhotoboothPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=フォトブース"
-              alt="フォトブース"
+              src="/placeholder.svg?height=400&width=800&text=fact photo"
+              alt="fact photo -in campus festival-"
               width={800}
               height={400}
               className="w-full h-full object-cover"
@@ -29,17 +29,16 @@ export default function PhotoboothPage() {
           </div>
 
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">フォトブース</CardTitle>
-            <p className="text-lg text-gray-600">思い出の一枚を撮影しよう！</p>
+            <CardTitle className="text-3xl font-bold">fact photo -in campus festival-</CardTitle>
+            <p className="text-lg text-gray-600">あなたの"いま"を、未来に届ける一枚に。</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                様々な小道具やセットを使って、思い出に残る写真を撮影できるフォトブースです。
-                友達同士、家族、カップルで楽しい写真を撮って、キャンフェスの思い出を残しませんか？
-                撮影した写真はその場でプリントしてお渡しします！
+                今年もフォトブース企画「fact
+                photo」、開催いたします！昨年ご好評をいただいたこの企画、今年はさらにパワーアップ！今回はその場でプリントして持ち帰れるプランをご用意しました。もちろん、データだけのご利用も大歓迎です。キャンフェスで過ごす"いま"を、"最高のカタチ"で残してみませんか？あなたの"いま"を、未来に届ける一枚に。ぜひ、お立ち寄りください！
               </p>
             </div>
 
@@ -56,44 +55,24 @@ export default function PhotoboothPage() {
                   <li>
                     <strong>参加費:</strong> 1枚 300円
                   </li>
-                  <li>
-                    <strong>対象:</strong> どなたでも参加可能
-                  </li>
                 </ul>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-3">用意している小道具</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="font-medium">帽子・サングラス</p>
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="font-medium">吹き出しボード</p>
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="font-medium">季節の小物</p>
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="font-medium">面白マスク</p>
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="font-medium">フレーム</p>
-                </div>
-                <div className="bg-white p-3 rounded-lg shadow-sm">
-                  <p className="font-medium">その他多数</p>
-                </div>
-              </div>
+              <h3 className="text-xl font-semibold mb-3">こだわりポイント</h3>
+              <p className="text-gray-700 leading-relaxed">
+                今回のフォトブースでは、閉鎖的な空間での写真表現に挑戦しています。敢えて狭く、無機質な空間を設定することで、写る人自身の存在や個性、色彩がより際立つように設計しました。その「無機質な箱」に花を咲かせるのは、あなたたち自身です。背景ではなく、被写体が主役。シンプルだからこそ、表情や関係性、"今"の空気感がより深く焼き付きます。キャンフェスの思い出を、ただの記録で終わらせない。この一瞬をアートに、そして記憶に。あなたにとって、このキャンフェスが最高のものとなるように。
+              </p>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold mb-3">注意事項</h3>
               <ul className="list-disc list-inside text-gray-700 space-y-1">
                 <li>撮影は1組5分程度でお願いします</li>
-                <li>小道具は大切に扱ってください</li>
                 <li>混雑時はお待ちいただく場合があります</li>
                 <li>プリント枚数に限りがあります</li>
+                <li>データのお渡しはその場で行います</li>
               </ul>
             </div>
           </CardContent>
