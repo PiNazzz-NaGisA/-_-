@@ -52,7 +52,7 @@ export default function ShootingPage() {
                     <strong>場所:</strong> 中教室後方
                   </li>
                   <li>
-                    <strong>参加費:</strong> 1回 100円
+                    <strong>参加費:</strong> チケット1枚(100円)
                   </li>
                   <li>
                     <strong>チケット販売場所:</strong> キャンパス入り口にて販売中(数に限りがございます。)

@@ -13,10 +13,6 @@ export function useSmoothScroll() {
         }
 
         const targetId = href.substring(1)
-        if (!targetId) {
-          return
-        }
-
         try {
           const element = document.querySelector(`#${targetId}`)
           if (element) {

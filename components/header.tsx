@@ -16,7 +16,7 @@ export function Header() {
     { href: "#overview", label: "開催概要" },
     { href: "#pickup", label: "企画紹介" },
     { href: "#schedule", label: "ステージタイムテーブル" },
-    { href: "#notice", label: "注意事項" },
+    { href: "#notes", label: "注意事項" },
   ]
 
   return (
