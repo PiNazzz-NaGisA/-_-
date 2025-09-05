@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
@@ -11,29 +12,29 @@ export function Header() {
   useSmoothScroll()
 
   const navItems = [
-    { href: "#", label: "TOP" },
-    { href: "#overview", label: "開催概要" },
-    { href: "#plans", label: "企画紹介" },
-    { href: "#timetable", label: "ステージタイムテーブル" },
-    { href: "#precautions", label: "注意事項" },
+    { name: "TOP", href: "#hero" },
+    { name: "開催概要", href: "#overview" },
+    { name: "企画紹介", href: "#plans" },
+    { name: "ステージタイムテーブル", href: "#timetable" },
+    { name: "注意事項", href: "#precautions" },
   ]
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
-          <a className="mr-6 flex items-center space-x-2" href="#">
+          <Link className="mr-6 flex items-center space-x-2" href="/">
             <span className="hidden font-bold sm:inline-block">福岡薬院キャンフェス</span>
-          </a>
+          </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             {navItems.map((item) => (
-              <a
-                key={item.href}
+              <Link
+                key={item.name}
                 href={item.href}
                 className="transition-colors hover:text-foreground/80 text-foreground/60"
               >
-                {item.label}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </nav>
         </div>
@@ -48,20 +49,20 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
-            <a href="#" className="flex items-center" onClick={() => setIsOpen(false)}>
+            <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
               <span className="font-bold">福岡薬院キャンフェス</span>
-            </a>
+            </Link>
             <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
               <div className="flex flex-col space-y-3">
                 {navItems.map((item) => (
-                  <a
-                    key={item.href}
+                  <Link
+                    key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
                     className="transition-colors hover:text-foreground/80 text-foreground/60"
                   >
-                    {item.label}
-                  </a>
+                    {item.name}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -69,9 +70,9 @@ export function Header() {
         </Sheet>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-            <a href="#" className="inline-block font-bold md:hidden">
+            <Link className="inline-block font-bold md:hidden" href="/">
               福岡薬院キャンフェス
-            </a>
+            </Link>
           </div>
         </div>
       </div>

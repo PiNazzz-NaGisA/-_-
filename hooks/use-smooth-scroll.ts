@@ -24,7 +24,7 @@ export function useSmoothScroll() {
             })
           }
         } catch (error) {
-          console.error("Invalid selector:", href)
+          console.warn("Invalid selector:", href)
         }
       }
     }
