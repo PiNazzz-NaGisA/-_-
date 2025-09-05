@@ -19,7 +19,7 @@ export function PickupSection() {
       href: "/plans/shooting",
     },
     {
-      title: "フォトブース",
+      title: "fact photo -in campus festival-",
       description: "企画班",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["企画班", "写真"],
