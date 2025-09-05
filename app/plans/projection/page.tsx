@@ -66,36 +66,6 @@ export default function ProjectionPlanPage() {
                 </p>
               </div>
 
-              <h2 className="text-2xl font-semibold mb-4">上映プログラム</h2>
-              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
-                <li>18:00-18:15「薬院キャンパスの四季」</li>
-                <li>18:20-18:35「未来への扉」</li>
-                <li>18:40-18:55「学生生活の思い出」</li>
-                <li>19:00-19:15「福岡薬院万博への招待」</li>
-                <li>19:20-19:35「希望の光」</li>
-                <li>19:40-20:00「グランドフィナーレ」</li>
-              </ul>
-
-              <h2 className="text-2xl font-semibold mb-4">見どころ</h2>
-              <div className="grid md:grid-cols-2 gap-4 mb-6">
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-2">最新技術</h3>
-                  <p className="text-gray-700 text-sm">4K高解像度プロジェクターを使用した鮮明な映像</p>
-                </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-2">オリジナル楽曲</h3>
-                  <p className="text-gray-700 text-sm">音楽部とのコラボレーションによる専用BGM</p>
-                </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-2">インタラクティブ</h3>
-                  <p className="text-gray-700 text-sm">観客の拍手に反応する演出も</p>
-                </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-2">記念撮影</h3>
-                  <p className="text-gray-700 text-sm">映像と一緒に写真撮影OK</p>
-                </div>
-              </div>
-
               <h2 className="text-2xl font-semibold mb-4">注意事項</h2>
               <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                 <li>雨天の場合は中止となります</li>
