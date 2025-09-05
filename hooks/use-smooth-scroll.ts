@@ -14,7 +14,7 @@ export function useSmoothScroll() {
 
         try {
           const targetId = href.substring(1)
-          const targetElement = document.querySelector(`#${targetId}`)
+          const targetElement = document.getElementById(targetId)
 
           if (targetElement) {
             e.preventDefault()
@@ -24,7 +24,7 @@ export function useSmoothScroll() {
             })
           }
         } catch (error) {
-          console.error("Invalid selector:", href)
+          console.error("Smooth scroll error:", error)
         }
       }
     }
