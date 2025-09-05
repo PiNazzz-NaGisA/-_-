@@ -10,8 +10,6 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1 max-w-screen-xl mx-auto w-full">
-        {" "}
-        {/* ここにmax-w-screen-xlとmx-autoを追加 */}
         {/* キャンフェスサイトのメインタイトル */}
         <HeroSection />
         {/* 今年のテーマ */}
@@ -26,8 +24,7 @@ export default function Home() {
             ＠N/S/R高福岡薬院キャンパス
           </p>
         </ContentSection>
-        {/* 「キャンフェスとは」セクションを削除しました */}
-        <PickupSection />
+        {/* ステージタイムテーブル */}
         <ContentSection
           id="timetable"
           title="ステージタイムテーブル"
@@ -39,6 +36,9 @@ export default function Home() {
             <p>詳細が決まり次第、こちらで公開いたしますので、今しばらくお待ちください。</p>
           </div>
         </ContentSection>
+        {/* 企画紹介（体験型企画とステージ企画） */}
+        <PickupSection />
+        {/* 注意事項 */}
         <ContentSection id="precautions" title="注意事項" className="bg-gray-50 shadow-sm rounded-lg mx-4 my-8">
           <ul className="list-disc list-inside">
             <li>駐車場のご用意がございません、近隣のコインパーキングや公共交通機関をご利用ください。</li>

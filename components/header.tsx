@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="max-w-screen-xl mx-auto flex h-14 items-center px-4">
+      <div className="container flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
           <a className="mr-6 flex items-center space-x-2" href="#">
             <span className="hidden font-bold sm:inline-block">福岡薬院キャンフェス</span>
@@ -58,7 +58,7 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-foreground/60 transition-colors hover:text-foreground"
+                    className="transition-colors hover:text-foreground/80 text-foreground/60"
                   >
                     {item.label}
                   </a>
