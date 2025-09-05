@@ -73,15 +73,6 @@ export default function ProjectionPlanPage() {
                 <li>フラッシュ撮影はご遠慮ください</li>
                 <li>大きな音が出ますので、小さなお子様はご注意ください</li>
               </ul>
-
-              <h2 className="text-2xl font-semibold mb-4">企画班からのメッセージ</h2>
-              <div className="bg-purple-50 p-6 rounded-lg">
-                <p className="text-gray-700 leading-relaxed">
-                  プロジェクションマッピング企画班では、半年以上かけて準備してきた渾身の作品をお届けします！
-                  光と音楽が織りなす幻想的な世界で、特別なひとときをお過ごしください。
-                  きっと心に残る感動的な体験になると思います。皆様のお越しをお待ちしております！
-                </p>
-              </div>
             </div>
           </div>
         </div>

@@ -14,10 +14,6 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const closeMenu = () => {
-    setIsMenuOpen(false)
-  }
-
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,19 +26,19 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/#top" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/#top" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               TOP
             </Link>
-            <Link href="/#overview" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/#overview" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               開催概要
             </Link>
-            <Link href="/#plans" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/#plans" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               企画紹介
             </Link>
-            <Link href="/#schedule" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/#schedule" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               ステージタイムテーブル
             </Link>
-            <Link href="/#notes" className="text-gray-700 hover:text-gray-900 transition-colors">
+            <Link href="/#notes" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
               注意事項
             </Link>
           </nav>
@@ -61,36 +57,36 @@ export function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <Link
                 href="/#top"
-                className="block px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors"
-                onClick={closeMenu}
+                className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
               >
                 TOP
               </Link>
               <Link
                 href="/#overview"
-                className="block px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors"
-                onClick={closeMenu}
+                className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
               >
                 開催概要
               </Link>
               <Link
                 href="/#plans"
-                className="block px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors"
-                onClick={closeMenu}
+                className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
               >
                 企画紹介
               </Link>
               <Link
                 href="/#schedule"
-                className="block px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors"
-                onClick={closeMenu}
+                className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
               >
                 ステージタイムテーブル
               </Link>
               <Link
                 href="/#notes"
-                className="block px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors"
-                onClick={closeMenu}
+                className="text-gray-700 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
               >
                 注意事項
               </Link>

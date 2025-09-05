@@ -20,7 +20,8 @@ const plans = [
   {
     id: "photobooth",
     title: "fact photo -in campus festival-",
-    description: 'あなたの"いま"を、未来に届ける一枚に。キャンフェスで過ごす特別な瞬間を最高のカタチで残しませんか？',
+    description:
+      'あなたの"いま"を、未来に届ける一枚に。キャンフェスで過ごす"いま"を、"最高のカタチ"で残してみませんか？',
     category: "撮影",
     image: "/placeholder.svg?height=200&width=300&text=fact+photo",
     href: "/plans/photobooth",
@@ -44,7 +45,7 @@ const plans = [
   {
     id: "weekly1-workshop",
     title: "週1物販ワークショップ",
-    description: "手作り体験と物販を組み合わせた楽しいワークショップです！",
+    description: "手作り体験とオリジナルグッズの販売を行います！",
     category: "ワークショップ",
     image: "/placeholder.svg?height=200&width=300&text=週1物販ワークショップ",
     href: "/plans/weekly1-workshop",
@@ -52,7 +53,7 @@ const plans = [
   {
     id: "ned-fukuoka",
     title: "NED in 福岡薬院万博2025",
-    description: "福岡薬院万博2025の特別企画をお楽しみください！",
+    description: "特別企画として開催される福岡薬院万博2025をお楽しみください！",
     category: "特別企画",
     image: "/placeholder.svg?height=200&width=300&text=NED+in+福岡薬院万博2025",
     href: "/plans/ned-fukuoka",
@@ -60,7 +61,7 @@ const plans = [
   {
     id: "kuramoto-consultation",
     title: "倉本さんのお悩み相談室",
-    description: "お悩みを気軽に相談できる温かい空間をご用意しています！",
+    description: "日頃の悩みを気軽に相談できる特別な時間をご用意しました！",
     category: "相談",
     image: "/placeholder.svg?height=200&width=300&text=倉本さんのお悩み相談室",
     href: "/plans/kuramoto-consultation",
@@ -68,7 +69,7 @@ const plans = [
   {
     id: "communication-circle",
     title: "コミュニケーションサークル発表",
-    description: "サークル活動の成果を発表する特別なステージです！",
+    description: "サークル活動の成果を発表します！みなさんぜひお越しください！",
     category: "発表",
     image: "/placeholder.svg?height=200&width=300&text=コミュニケーションサークル発表",
     href: "/plans/communication-circle",
@@ -84,7 +85,7 @@ const plans = [
   {
     id: "quiz-contest",
     title: "第1回福岡薬院クイズ王決定戦",
-    description: "知識を競う白熱のクイズバトル！クイズ王の座を目指そう！",
+    description: "知識を競い合う白熱のクイズバトル！優勝者には豪華賞品をご用意！",
     category: "ゲーム",
     image: "/placeholder.svg?height=200&width=300&text=クイズ王決定戦",
     href: "/plans/quiz-contest",
@@ -116,7 +117,7 @@ export function PickupSection() {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">企画紹介</h2>
-          <p className="text-lg text-gray-600">今年のキャンフェスでは、様々な楽しい企画をご用意しています</p>
+          <p className="text-lg text-gray-600">今年のキャンフェスでは、様々な魅力的な企画をご用意しています</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
@@ -136,7 +137,7 @@ export function PickupSection() {
                   <Badge variant="secondary">{plan.category}</Badge>
                 </div>
                 <CardTitle className="text-xl">{plan.title}</CardTitle>
-                <CardDescription className="text-sm text-gray-600 line-clamp-3">{plan.description}</CardDescription>
+                <CardDescription className="text-sm text-gray-600">{plan.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <Link href={plan.href}>
