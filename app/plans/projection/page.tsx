@@ -1,97 +1,122 @@
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeftIcon } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
-export default function ProjectionPage() {
+export default function ProjectionPlanPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1 max-w-screen-xl mx-auto w-full px-4 py-8">
         <div className="mb-6">
           <Link href="/#plans">
-            <Button variant="outline" className="group bg-transparent">
-              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
+            <Button variant="outline" className="flex items-center gap-2 bg-transparent">
+              <ArrowLeft className="h-4 w-4" />
               企画一覧に戻る
             </Button>
           </Link>
         </div>
 
-        <Card className="max-w-4xl mx-auto">
-          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="relative h-64 md:h-96">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=プロジェクションマッピング"
-              alt="プロジェクションマッピング"
-              width={800}
-              height={400}
-              className="w-full h-full object-cover"
+              src="/placeholder.svg?height=400&width=800&text=プロジェクションマッピングin夏の思い出"
+              alt="プロジェクションマッピングin夏の思い出"
+              fill
+              className="object-cover"
             />
           </div>
 
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">プロジェクションマッピング</CardTitle>
-            <p className="text-lg text-gray-600">最新技術による幻想的な映像体験</p>
-          </CardHeader>
+          <div className="p-6 md:p-8">
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">企画班</span>
+              <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">アート</span>
+            </div>
 
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
-              <p className="text-gray-700 leading-relaxed">
-                最新のプロジェクションマッピング技術を使用して、建物の壁面に幻想的な映像を投影します。
-                光と音楽が織りなす美しい世界をお楽しみください。デジタルアートの新しい可能性を体感できる特別な企画です。
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">プロジェクションマッピングin夏の思い出</h1>
+
+            <div className="prose max-w-none">
+              <h2 className="text-2xl font-semibold mb-4">企画概要</h2>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                キャンフェス史上初！プロジェクションマッピングを展示します！飲食の前後にぜひ立ち寄ってみてください！
               </p>
-            </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li>
-                    <strong>開催時間:</strong> 18:00 - 19:30（日没後）
-                  </li>
-                  <li>
-                    <strong>場所:</strong> 校舎外壁
-                  </li>
-                  <li>
-                    <strong>参加費:</strong> 無料
-                  </li>
-                  <li>
-                    <strong>対象:</strong> どなたでも観覧可能
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">上映スケジュール</h3>
-              <div className="space-y-3">
-                <div className="bg-white p-4 rounded-lg border">
-                  <p className="font-medium">第1回上映: 18:00 - 18:15</p>
-                  <p className="text-sm text-gray-600">テーマ: 「薬院の四季」</p>
+              <h2 className="text-2xl font-semibold mb-4">詳細情報</h2>
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">開催時間</h3>
+                  <p className="text-gray-700">18:00 - 20:00（日没後）</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border">
-                  <p className="font-medium">第2回上映: 18:30 - 18:45</p>
-                  <p className="text-sm text-gray-600">テーマ: 「未来への扉」</p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">場所</h3>
+                  <p className="text-gray-700">校舎外壁（中庭側）</p>
                 </div>
-                <div className="bg-white p-4 rounded-lg border">
-                  <p className="font-medium">第3回上映: 19:00 - 19:15</p>
-                  <p className="text-sm text-gray-600">テーマ: 「学生生活の思い出」</p>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">参加費</h3>
+                  <p className="text-gray-700">無料</p>
                 </div>
               </div>
-            </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>天候により中止になる場合があります</li>
-                <li>観覧は指定エリアからお願いします</li>
-                <li>フラッシュ撮影はご遠慮ください</li>
-                <li>音響設備を使用するため、近隣への配慮をお願いします</li>
+              <h2 className="text-2xl font-semibold mb-4">こだわりポイント</h2>
+              <div className="bg-purple-50 p-6 rounded-lg mb-6">
+                <p className="text-gray-700 leading-relaxed">
+                  展示のテーマは『夏』です。夏の思い出の写真やイラストをたくさん集めました！真っ暗な部屋の中で、ぜひ楽しんでください！
+                </p>
+              </div>
+
+              <h2 className="text-2xl font-semibold mb-4">上映プログラム</h2>
+              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                <li>18:00-18:15「薬院キャンパスの四季」</li>
+                <li>18:20-18:35「未来への扉」</li>
+                <li>18:40-18:55「学生生活の思い出」</li>
+                <li>19:00-19:15「福岡薬院万博への招待」</li>
+                <li>19:20-19:35「希望の光」</li>
+                <li>19:40-20:00「グランドフィナーレ」</li>
               </ul>
+
+              <h2 className="text-2xl font-semibold mb-4">見どころ</h2>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">最新技術</h3>
+                  <p className="text-gray-700 text-sm">4K高解像度プロジェクターを使用した鮮明な映像</p>
+                </div>
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">オリジナル楽曲</h3>
+                  <p className="text-gray-700 text-sm">音楽部とのコラボレーションによる専用BGM</p>
+                </div>
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">インタラクティブ</h3>
+                  <p className="text-gray-700 text-sm">観客の拍手に反応する演出も</p>
+                </div>
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">記念撮影</h3>
+                  <p className="text-gray-700 text-sm">映像と一緒に写真撮影OK</p>
+                </div>
+              </div>
+
+              <h2 className="text-2xl font-semibold mb-4">注意事項</h2>
+              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                <li>雨天の場合は中止となります</li>
+                <li>観覧エリアには限りがあります</li>
+                <li>フラッシュ撮影はご遠慮ください</li>
+                <li>大きな音が出ますので、小さなお子様はご注意ください</li>
+              </ul>
+
+              <h2 className="text-2xl font-semibold mb-4">企画班からのメッセージ</h2>
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <p className="text-gray-700 leading-relaxed">
+                  プロジェクションマッピング企画班では、半年以上かけて準備してきた渾身の作品をお届けします！
+                  光と音楽が織りなす幻想的な世界で、特別なひとときをお過ごしください。
+                  きっと心に残る感動的な体験になると思います。皆様のお越しをお待ちしております！
+                </p>
+              </div>
             </div>
-          </CardContent>
-        </Card>
-      </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }

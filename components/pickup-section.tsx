@@ -26,7 +26,7 @@ export function PickupSection() {
       href: "/plans/photobooth",
     },
     {
-      title: "プロジェクションマッピング",
+      title: "プロジェクションマッピングin夏の思い出",
       description: "企画班",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["企画班", "アート"],
