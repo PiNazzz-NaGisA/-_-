@@ -20,8 +20,8 @@ export default function FoodPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=食品販売"
-              alt="食品販売"
+              src="/placeholder.svg?height=400&width=800&text=もちパンカフェ"
+              alt="もちパンカフェ"
               width={800}
               height={400}
               className="w-full h-full object-cover"
@@ -29,9 +29,9 @@ export default function FoodPage() {
           </div>
 
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">食品販売</CardTitle>
+            <CardTitle className="text-3xl font-bold">もちパンカフェ</CardTitle>
             <p className="text-lg text-gray-600">
-              パンケーキとわらび餅ドリンクの美味しい組み合わせをお楽しみください！
+              わらびもちのドリンクとパンケーキを販売するカフェをお楽しみください！
             </p>
           </CardHeader>
 
@@ -39,7 +39,7 @@ export default function FoodPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                ふわふわのパンケーキと、もちもち食感が楽しいわらび餅ドリンクを販売します！ぜひお気軽にご参加ください！
+                わらびもちのドリンクとパンケーキを販売するカフェ！３種のパンケーキとわらび餅ドリンクがあります！キャンフェスの思い出にぜひぜひ購入してください！！
               </p>
             </div>
 
@@ -54,7 +54,7 @@ export default function FoodPage() {
                     <strong>場所:</strong> 1階カフェテリア
                   </li>
                   <li>
-                    <strong>参加費:</strong> 各商品300円〜500円
+                    <strong>参加費:</strong> パンケーキ各種・ドリンク各種
                   </li>
                   <li>
                     <strong>販売数:</strong> 各商品限定100個
@@ -65,8 +65,11 @@ export default function FoodPage() {
 
             <div>
               <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
+              <p className="text-gray-700 mb-4">
+                パンケーキは「ハニーバター」「チョコ&ホイップ」「餡子を挟んだどら焼き風」の3種類のトッピングがあり好きな味をお選びいただけます！(トッピングごとに売り切れ次第終了)
+              </p>
               <p className="text-gray-700">
-                パンケーキは焼きたてをご提供し、わらび餅ドリンクは冷たくて美味しい和スイーツドリンクです。甘いものが好きな方にはたまらない組み合わせをご用意しています！
+                「抹茶ラテ」と「ミルクティー」の2種類からお選びいただけます！お好きな味をお選びください！
               </p>
             </div>
 
