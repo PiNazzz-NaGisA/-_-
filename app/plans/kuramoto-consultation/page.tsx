@@ -67,16 +67,6 @@ export default function KuramotoConsultationPage() {
                 恋愛、友人関係、将来の進路、家族のことなど、どんな小さなことでも大丈夫。温かい人柄の倉本さんが、きっと心に寄り添うアドバイスをしてくれるはずです！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>相談内容の秘密は厳守いたします</li>
-                <li>1人15分程度でお願いします（状況により延長可能）</li>
-                <li>深刻な問題については専門機関をご紹介する場合があります</li>
-                <li>相談は日本語のみとなります</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

@@ -67,16 +67,6 @@ export default function ProjectionPage() {
                 展示のテーマは『夏』です。夏の思い出の写真やイラストをたくさん集めました！真っ暗な部屋の中で、ぜひ楽しんでください！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>展示は暗い部屋で行われます。足元にお気をつけください</li>
-                <li>上映中の入退室は自由ですが、他の来場者の迷惑にならないようお静かにお願いします</li>
-                <li>写真撮影は可能ですが、フラッシュの使用はご遠慮ください</li>
-                <li>小さなお子様は保護者の方と一緒にご観覧ください</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

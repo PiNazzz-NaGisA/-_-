@@ -67,16 +67,6 @@ export default function SubmarineEscapePage() {
                 チームメンバーと協力して謎を解き、仕掛けを突破し、爆発する前に潜水艇から脱出しましょう！論理的思考力、観察力、そして何よりチームワークが試される究極の体験型ゲームです！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>4〜6人でチームを組んでご参加ください</li>
-                <li>動きやすい服装でお越しください</li>
-                <li>ゲーム中は携帯電話の使用禁止</li>
-                <li>安全のため、係員の指示に従ってください</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

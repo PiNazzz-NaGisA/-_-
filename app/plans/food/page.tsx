@@ -72,16 +72,6 @@ export default function FoodPage() {
                 「抹茶ラテ」と「ミルクティー」の2種類からお選びいただけます！お好きな味をお選びください！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>売り切れ次第終了となります</li>
-                <li>アレルギーをお持ちの方は事前にお申し出ください</li>
-                <li>混雑時はお待ちいただく場合があります</li>
-                <li>イートインスペースもご利用いただけます</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

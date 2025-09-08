@@ -67,16 +67,6 @@ export default function KaraokeContestPage() {
                 歌自慢の皆さんはもちろん、普段は人前で歌わない方も気軽に参加できるアットホームな雰囲気の大会です。様々な部門を設けているので、どなたでも楽しく参加していただけます！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>当日14:30から体育館入口で受付開始（先着30名）</li>
-                <li>1人1曲まで（デュエット部門は2人で1曲）</li>
-                <li>楽曲は事前に用意されたリストから選択</li>
-                <li>歌詞カードの持ち込み可能</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

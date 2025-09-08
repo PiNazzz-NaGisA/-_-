@@ -67,16 +67,6 @@ export default function ShootingPage() {
                 昔懐かしのあのお菓子たちを景品としてご用意してます！大景品にはみんな大好きあのお菓子まで！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>安全のため、係員の指示に従ってください</li>
-                <li>小さなお子様は保護者の方と一緒にご参加ください</li>
-                <li>混雑時はお待ちいただく場合があります</li>
-                <li>チケットは事前にキャンパス入り口でお買い求めください</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

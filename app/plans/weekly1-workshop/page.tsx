@@ -89,16 +89,6 @@ export default function FloraPage() {
                 </div>
               </div>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>ワークショップは当日受付（先着順）</li>
-                <li>汚れても良い服装でお越しください</li>
-                <li>小学生以下のお子様は保護者同伴でお願いします</li>
-                <li>材料がなくなり次第終了となります</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

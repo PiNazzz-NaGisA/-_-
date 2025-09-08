@@ -67,16 +67,6 @@ export default function CommunicationCirclePage() {
                 スピーチ、プレゼンテーション、ディベートなど、様々な形式でのコミュニケーション技術を披露します。観客の皆さんも一緒に参加できるワークショップも開催予定です！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>途中入退場は自由です</li>
-                <li>ワークショップへの参加は任意です</li>
-                <li>録音・録画はご遠慮ください</li>
-                <li>質問や感想は発表後にお聞かせください</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

@@ -67,16 +67,6 @@ export default function PhotoboothPage() {
                 昨年ご好評をいただいたこの企画、今年はさらにパワーアップ！今回はその場でプリントして持ち帰れるプランをご用意しました。キャンフェスで過ごす"いま"を、"最高のカタチ"で残してみませんか！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>撮影は順番制となります</li>
-                <li>混雑時はお待ちいただく場合があります</li>
-                <li>データお渡しはQRコードで行います</li>
-                <li>プリント版は現地でお渡しします</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

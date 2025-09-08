@@ -67,16 +67,6 @@ export default function QuizContestPage() {
                 一般常識から専門知識、地域に関する問題まで幅広いジャンルの問題を出題します。チームワークと知識で福岡薬院初代クイズ王の座を目指しましょう！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>3〜4人でチームを組んでご参加ください</li>
-                <li>チーム名を事前に決めておいてください</li>
-                <li>事前申込推奨（当日受付も可能ですが定員に達した場合は締切）</li>
-                <li>筆記用具は各自でご持参ください</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

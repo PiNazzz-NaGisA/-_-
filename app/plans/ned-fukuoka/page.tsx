@@ -68,16 +68,6 @@ export default function NedFukuokaPage() {
                 地域の歴史、文化、グルメ、人々との交流を通じて、薬院の新たな一面を発見できる万博形式のイベントです。薬院クイズラリーも開催予定です！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>各パビリオンは混雑状況により入場制限を行う場合があります</li>
-                <li>クイズラリーの景品は数に限りがあります</li>
-                <li>地域の方々との交流では、マナーを守ってご参加ください</li>
-                <li>写真撮影は許可された場所のみでお願いします</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>

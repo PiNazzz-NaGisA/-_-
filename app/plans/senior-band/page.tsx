@@ -67,16 +67,6 @@ export default function SeniorBandPage() {
                 長年音楽を愛し続けてきたメンバーたちが、懐かしの名曲から現代の楽曲まで、幅広いレパートリーで心温まる演奏をお届けします。世代を超えた音楽の素晴らしさを感じられる貴重な機会です！
               </p>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>屋外での開催のため、天候により中止・変更の場合があります</li>
-                <li>椅子席は先着順です（立ち見も可能）</li>
-                <li>演奏中の録音・録画は許可制です</li>
-                <li>第3部では一緒に歌っていただけます</li>
-              </ul>
-            </div>
           </CardContent>
         </Card>
       </div>
