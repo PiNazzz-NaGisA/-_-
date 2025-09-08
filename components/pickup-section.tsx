@@ -34,14 +34,14 @@ export function PickupSection() {
       href: "/plans/projection",
     },
     {
-      title: "食品販売",
+      title: "もちパンカフェ",
       description: "物販",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["物販", "フード", "ドリンク"],
       href: "/plans/food",
     },
     {
-      title: "週1物販ワークショップ",
+      title: "FLOLA（フローラ）",
       description: "物販・体験",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["物販", "ワークショップ", "体験"],

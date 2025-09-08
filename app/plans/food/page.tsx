@@ -1,90 +1,129 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeftIcon } from "lucide-react"
-import Link from "next/link"
+import { ArrowLeft, Clock, MapPin, Users } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function FoodPage() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-6">
-          <Link href="/#plans">
-            <Button variant="outline" className="group bg-transparent">
-              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-              企画一覧に戻る
-            </Button>
+      {/* Header */}
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-4">
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            トップページに戻る
           </Link>
         </div>
+      </header>
 
-        <Card className="max-w-4xl mx-auto">
-          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          {/* Hero Section */}
+          <div className="text-center mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">もちパンカフェ</h1>
+            <p className="text-xl text-gray-600">わらびもちドリンクとパンケーキをお楽しみください！</p>
+          </div>
+
+          {/* Main Image */}
+          <div className="mb-8">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=もちパンカフェ"
+              src="/placeholder.svg?height=400&width=800"
               alt="もちパンカフェ"
               width={800}
               height={400}
-              className="w-full h-full object-cover"
+              className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
             />
           </div>
 
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">もちパンカフェ</CardTitle>
-            <p className="text-lg text-gray-600">
-              わらびもちのドリンクとパンケーキを販売するカフェをお楽しみください！
-            </p>
-          </CardHeader>
+          {/* Content Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 企画概要 */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-gray-900">企画概要</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 leading-relaxed">
+                  わらびもちのドリンクとパンケーキを販売するカフェ！３種のパンケーキとわらび餅ドリンクがあります！キャンフェスの思い出にぜひぜひ購入してください！！
+                </p>
+                <p className="text-gray-700 leading-relaxed mt-4">ぜひお気軽にご参加ください！</p>
+              </CardContent>
+            </Card>
 
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
-              <p className="text-gray-700 leading-relaxed">
-                わらびもちのドリンクとパンケーキを販売するカフェ！３種のパンケーキとわらび餅ドリンクがあります！キャンフェスの思い出にぜひぜひ購入してください！！
-              </p>
-            </div>
+            {/* 開催情報 */}
+            <Card className="bg-blue-50 border-blue-200">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-blue-900">開催情報</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center text-blue-800">
+                  <Clock className="mr-3 h-5 w-5" />
+                  <span>開催時間：12:00〜16:00</span>
+                </div>
+                <div className="flex items-center text-blue-800">
+                  <MapPin className="mr-3 h-5 w-5" />
+                  <span>場所：1階カフェエリア</span>
+                </div>
+                <div className="flex items-center text-blue-800">
+                  <Users className="mr-3 h-5 w-5" />
+                  <span>対象：どなたでも</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li>
-                    <strong>開催時間:</strong> 12:00 - 16:00
-                  </li>
-                  <li>
-                    <strong>場所:</strong> 1階カフェテリア
-                  </li>
-                  <li>
-                    <strong>参加費:</strong> パンケーキ各種・ドリンク各種
-                  </li>
-                  <li>
-                    <strong>販売数:</strong> 各商品限定100個
-                  </li>
-                </ul>
+          {/* こだわりポイント */}
+          <Card className="mt-8">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-gray-900">こだわりポイント！</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-900 mb-2">パンケーキ（3種類）</h4>
+                  <p className="text-gray-700">
+                    パンケーキは「ハニーバター」「チョコ&ホイップ」「餡子を挟んだどら焼き風」の3種類のトッピングがあり好きな味をお選びいただけます！（トッピングごとに売り切れ次第終了）
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg text-gray-900 mb-2">わらび餅ドリンク（2種類）</h4>
+                  <p className="text-gray-700">
+                    「抹茶ラテ」と「ミルクティー」の2種類からお選びいただけます！お好きな味をお選びください！
+                  </p>
+                </div>
               </div>
-            </div>
+            </CardContent>
+          </Card>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700 mb-4">
-                パンケーキは「ハニーバター」「チョコ&ホイップ」「餡子を挟んだどら焼き風」の3種類のトッピングがあり好きな味をお選びいただけます！(トッピングごとに売り切れ次第終了)
-              </p>
-              <p className="text-gray-700">
-                「抹茶ラテ」と「ミルクティー」の2種類からお選びいただけます！お好きな味をお選びください！
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">注意事項</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>売り切れ次第終了となります</li>
-                <li>アレルギーをお持ちの方は事前にお申し出ください</li>
-                <li>混雑時はお待ちいただく場合があります</li>
-                <li>イートインスペースもご利用いただけます</li>
+          {/* 注意事項 */}
+          <Card className="mt-8">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-gray-900">注意事項</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li>商品は売り切れ次第終了となります</li>
+                <li>アレルギーをお持ちの方は事前にお声がけください</li>
+                <li>会場内でのお召し上がりをお願いいたします</li>
+                <li>ゴミは指定の場所に分別して捨ててください</li>
               </ul>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+            </CardContent>
+          </Card>
+
+          {/* Back to Top Button */}
+          <div className="text-center mt-12">
+            <Link href="/">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                トップページに戻る
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </main>
     </div>
   )
 }
