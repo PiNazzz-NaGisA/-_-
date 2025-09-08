@@ -62,7 +62,7 @@ export default function ShootingPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
+              <h3 className="text-xl font-semibold mb-3">景品について</h3>
               <p className="text-gray-700">
                 昔懐かしのあのお菓子たちを景品としてご用意してます！大景品にはみんな大好きあのお菓子まで！
               </p>

@@ -62,7 +62,7 @@ export default function PhotoboothPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
+              <h3 className="text-xl font-semibold mb-3">用意している小道具</h3>
               <p className="text-gray-700">
                 昨年ご好評をいただいたこの企画、今年はさらにパワーアップ！今回はその場でプリントして持ち帰れるプランをご用意しました。キャンフェスで過ごす"いま"を、"最高のカタチ"で残してみませんか！
               </p>
