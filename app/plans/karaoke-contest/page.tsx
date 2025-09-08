@@ -37,7 +37,9 @@ export default function KaraokeContestPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                福岡薬院キャンパス初開催となるカラオケ大会です！ぜひお気軽にご参加ください！
+                キャンフェスステージにて、カラオケ大会を開催します！！
+                上手い・下手関係なしに、みんなで盛り上がりましょう！！
+
               </p>
             </div>
 
