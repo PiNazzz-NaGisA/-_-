@@ -30,16 +30,15 @@ export default function NedFukuokaPage() {
 
           <CardHeader>
             <CardTitle className="text-3xl font-bold">NED in 福岡薬院万博2025</CardTitle>
-            <p className="text-lg text-gray-600">地域密着型の特別企画</p>
+            <p className="text-lg text-gray-600">地域密着型の特別企画をお楽しみください！</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                「NED（New Experience Design）in 福岡薬院万博2025」は、薬院地域の魅力を再発見し、
-                新しい体験をデザインする特別企画です。地域の歴史、文化、グルメ、人々との交流を通じて、
-                薬院の新たな一面を発見できる万博形式のイベントです。
+                「NED（New Experience Design）in
+                福岡薬院万博2025」は、薬院地域の魅力を再発見し、新しい体験をデザインする特別企画です！ぜひお気軽にご参加ください！
               </p>
             </div>
 
@@ -64,46 +63,10 @@ export default function NedFukuokaPage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-3">パビリオン紹介</h3>
-              <div className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border border-red-200">
-                  <h4 className="font-semibold text-red-600 mb-2">薬院歴史館</h4>
-                  <p className="text-sm text-gray-700">
-                    薬院地域の歴史を写真や資料で紹介。昔の薬院の様子から現在までの変遷を学べます。
-                  </p>
-                </div>
-
-                <div className="bg-white p-4 rounded-lg border border-green-200">
-                  <h4 className="font-semibold text-green-600 mb-2">薬院グルメワールド</h4>
-                  <p className="text-sm text-gray-700">
-                    薬院周辺の名店グルメを試食できるコーナー。地域の美味しいお店を発見しよう！
-                  </p>
-                </div>
-
-                <div className="bg-white p-4 rounded-lg border border-blue-200">
-                  <h4 className="font-semibold text-blue-600 mb-2">未来の薬院デザイン室</h4>
-                  <p className="text-sm text-gray-700">
-                    参加者のアイデアで未来の薬院をデザイン。みんなで理想の街づくりを考えよう！
-                  </p>
-                </div>
-
-                <div className="bg-white p-4 rounded-lg border border-purple-200">
-                  <h4 className="font-semibold text-purple-600 mb-2">薬院人物図鑑</h4>
-                  <p className="text-sm text-gray-700">
-                    地域で活躍する人々のインタビュー映像や、住民の方々との交流コーナー。
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">特別イベント</h3>
-              <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
-                <h4 className="font-medium text-yellow-800 mb-2">薬院クイズラリー</h4>
-                <p className="text-sm text-yellow-700">
-                  各パビリオンを回ってクイズに答えよう！全問正解者には薬院オリジナルグッズをプレゼント。
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
+              <p className="text-gray-700">
+                地域の歴史、文化、グルメ、人々との交流を通じて、薬院の新たな一面を発見できる万博形式のイベントです。薬院クイズラリーも開催予定です！
+              </p>
             </div>
 
             <div>

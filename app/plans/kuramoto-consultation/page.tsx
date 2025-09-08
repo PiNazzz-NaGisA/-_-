@@ -30,16 +30,14 @@ export default function KuramotoConsultationPage() {
 
           <CardHeader>
             <CardTitle className="text-3xl font-bold">倉本さんのお悩み相談室</CardTitle>
-            <p className="text-lg text-gray-600">人生経験豊富な倉本さんが皆さんのお悩みにお答えします</p>
+            <p className="text-lg text-gray-600">人生経験豊富な倉本さんが皆さんのお悩みにお答えします！</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                人生経験豊富な倉本さんが、皆さんの様々なお悩みに真摯にお答えする相談室です。
-                恋愛、友人関係、将来の進路、家族のことなど、どんな小さなことでも大丈夫。
-                温かい人柄の倉本さんが、きっと心に寄り添うアドバイスをしてくれるはずです。
+                人生経験豊富な倉本さんが、皆さんの様々なお悩みに真摯にお答えする相談室です！ぜひお気軽にご参加ください！
               </p>
             </div>
 
@@ -54,72 +52,20 @@ export default function KuramotoConsultationPage() {
                     <strong>場所:</strong> 2階相談室
                   </li>
                   <li>
-                    <strong>相談時間:</strong> 1人15分程度
-                  </li>
-                  <li>
                     <strong>参加費:</strong> 無料
                   </li>
                   <li>
-                    <strong>対象:</strong> どなたでも
+                    <strong>相談時間:</strong> 1人15分程度
                   </li>
                 </ul>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-3">倉本さんプロフィール</h3>
-              <div className="bg-white p-6 rounded-lg border">
-                <div className="flex items-start space-x-4">
-                  <div className="w-20 h-20 bg-gray-300 rounded-full flex-shrink-0"></div>
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">倉本 太郎さん</h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      元高校教師として35年間教育現場で活躍。退職後は地域のボランティア活動に参加し、
-                      多くの若者の相談に乗ってきました。3人の子どもを育て上げた経験もあり、
-                      幅広い年代の方々から信頼を得ています。趣味は読書と園芸。
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">相談できる内容</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <div className="bg-pink-50 p-3 rounded-lg">
-                    <p className="font-medium text-pink-700">恋愛・人間関係</p>
-                  </div>
-                  <div className="bg-blue-50 p-3 rounded-lg">
-                    <p className="font-medium text-blue-700">進路・将来の悩み</p>
-                  </div>
-                  <div className="bg-green-50 p-3 rounded-lg">
-                    <p className="font-medium text-green-700">家族関係</p>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="bg-yellow-50 p-3 rounded-lg">
-                    <p className="font-medium text-yellow-700">学校・職場の悩み</p>
-                  </div>
-                  <div className="bg-purple-50 p-3 rounded-lg">
-                    <p className="font-medium text-purple-700">自分自身について</p>
-                  </div>
-                  <div className="bg-gray-50 p-3 rounded-lg">
-                    <p className="font-medium text-gray-700">その他なんでも</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">予約方法</h3>
-              <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
-                <p className="font-medium text-orange-800 mb-2">当日受付制</p>
-                <p className="text-sm text-orange-700">
-                  相談室前の受付で順番をお取りください。混雑時はお待ちいただく場合があります。
-                  相談内容は事前に簡単にメモしておくとスムーズです。
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
+              <p className="text-gray-700">
+                恋愛、友人関係、将来の進路、家族のことなど、どんな小さなことでも大丈夫。温かい人柄の倉本さんが、きっと心に寄り添うアドバイスをしてくれるはずです！
+              </p>
             </div>
 
             <div>

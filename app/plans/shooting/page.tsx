@@ -9,7 +9,7 @@ export default function ShootingPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href="/#pickup">
+          <Link href="/#plans">
             <Button variant="outline" className="group bg-transparent">
               <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
               企画一覧に戻る
