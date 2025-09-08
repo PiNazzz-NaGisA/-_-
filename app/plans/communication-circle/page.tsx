@@ -37,7 +37,7 @@ export default function CommunicationCirclePage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                コミュニケーション技術の向上を目指すサークルメンバーによる発表会です！ぜひお気軽にご参加ください！
+                CP生徒制作の短編ムービーを上映予定です！ぜひお気軽にご参加ください！
               </p>
             </div>
 
@@ -59,13 +59,6 @@ export default function CommunicationCirclePage() {
                   </li>
                 </ul>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700">
-                スピーチ、プレゼンテーション、ディベートなど、様々な形式でのコミュニケーション技術を披露します。観客の皆さんも一緒に参加できるワークショップも開催予定です！
-              </p>
             </div>
           </CardContent>
         </Card>
