@@ -29,15 +29,20 @@ export default function SubmarineEscapePage() {
           </div>
 
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">爆破しうる潜水艇からの脱出</CardTitle>
-            <p className="text-lg text-gray-600">制限時間60分！チームワークで潜水艇からの脱出を目指せ！</p>
+            <CardTitle className="text-3xl font-bold">爆発しうる潜水艇からの脱出</CardTitle>
+            <p className="text-lg text-gray-600">爆発まで残り10分！？リアル脱出型謎解き</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                海底に沈んだ潜水艇から制限時間60分以内に脱出する本格的な脱出ゲームです！ぜひお気軽にご参加ください！
+                『おめでとうございます！あなたは深海観光ツアーに当選しました！』
+                連絡を受け、潜水艇に乗るあなたたち。
+                深く潜ったそのとき、船内に突如アナウンスが響く。
+                「この船は10分後に爆発します。」
+                生き残るには、船に仕掛けられた爆弾を解除するしかない。
+                仲間と協力し、無事に帰ることはできるのか——
               </p>
             </div>
 
