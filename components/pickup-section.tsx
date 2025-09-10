@@ -166,7 +166,7 @@ export function PickupSection() {
         {/* ステージ企画 */}
         <div>
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">ステージ企画</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {displayedStagePlans.map((plan, index) => (
               <PlanCard key={index} plan={plan} index={index} />
             ))}
