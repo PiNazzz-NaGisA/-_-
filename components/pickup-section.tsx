@@ -79,6 +79,13 @@ export function PickupSection() {
       href: "/plans/kuramoto-consultation",
     },
     {
+      title: "シオン",
+      description: "音楽・演奏",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["音楽", "演奏"],
+      href: "/plans/piano-accordion",
+    },
+    {
       title: "第1回福岡薬院クイズ王決定戦",
       description: "クイズ大会",
       image: "/placeholder.svg?height=200&width=300",
@@ -98,13 +105,6 @@ export function PickupSection() {
       image: "/placeholder.svg?height=200&width=300",
       tags: ["音楽", "バンド", "世代交流"],
       href: "/plans/senior-band",
-    },
-    {
-      title: "シオン",
-      description: "音楽・演奏",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["音楽", "演奏"],
-      href: "/plans/piano-accordion",
     },
   ]
 
