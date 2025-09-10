@@ -64,13 +64,6 @@ export default function PianoAccordionPage() {
                 </ul>
               </div>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700">
-                ピアノの繊細な音色とアコーディオンの温かみのある響きが織りなす、心に響く演奏をお届けします。クラシックから現代曲まで、幅広いレパートリーで皆様をお迎えいたします！
-              </p>
-            </div>
           </CardContent>
         </Card>
       </div>
