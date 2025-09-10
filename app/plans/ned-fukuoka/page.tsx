@@ -30,15 +30,16 @@ export default function NedFukuokaPage() {
 
           <CardHeader>
             <CardTitle className="text-3xl font-bold">NED in 福岡薬院万博2025</CardTitle>
-            <p className="text-lg text-gray-600">地域密着型の特別企画をお楽しみください！</p>
+            <p className="text-lg text-gray-600">NED関係の何かを入れる</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                「NED（New Experience Design）in
-                福岡薬院万博2025」は、薬院地域の魅力を再発見し、新しい体験をデザインする特別企画です！ぜひお気軽にご参加ください！
+                この企画では、参加者が“推し”や“好きなこと”“自分の体験”などを語る「スピーチ部門」と、
+                即興でお題に応える「スキル部門」で、プレゼン力をぶつけ合います！
+                あたたかい応援とリアクションで盛り上げてください！！
               </p>
             </div>
 
@@ -60,13 +61,6 @@ export default function NedFukuokaPage() {
                   </li>
                 </ul>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700">
-                地域の歴史、文化、グルメ、人々との交流を通じて、薬院の新たな一面を発見できる万博形式のイベントです。薬院クイズラリーも開催予定です！
-              </p>
             </div>
           </CardContent>
         </Card>
