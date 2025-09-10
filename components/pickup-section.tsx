@@ -100,10 +100,10 @@ export function PickupSection() {
       href: "/plans/senior-band",
     },
     {
-      title: "ピアノとアコーディオンの演奏会",
+      title: "シオン",
       description: "音楽・演奏",
       image: "/placeholder.svg?height=200&width=300",
-      tags: ["音楽", "演奏", "クラシック"],
+      tags: ["音楽", "演奏"],
       href: "/plans/piano-accordion",
     },
   ]
