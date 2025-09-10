@@ -61,13 +61,6 @@ export default function QuizContestPage() {
                 </ul>
               </div>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700">
-                一般常識から専門知識、地域に関する問題まで幅広いジャンルの問題を出題します。チームワークと知識で福岡薬院初代クイズ王の座を目指しましょう！
-              </p>
-            </div>
           </CardContent>
         </Card>
       </div>
