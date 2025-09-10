@@ -37,7 +37,11 @@ export default function KuramotoConsultationPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                人生経験豊富な倉本さんが、皆さんの様々なお悩みに真摯にお答えする相談室です！ぜひお気軽にご参加ください！
+                ここ福岡薬院キャンパスでは、様々な人が在籍し、多種多様な人間関係を築き上げてきた。
+                そして、今、日頃から様々な人間関係の問題が起こっている...
+                そんな問題を解決する1人の男がいた。その名も倉本 光希！！！
+                と、いう事で事前に集めたお悩みになんと！倉本先生がお悩みに答えてくれます！
+                ぜひ参加してお悩みを解決して行ってください！
               </p>
             </div>
 
@@ -59,13 +63,6 @@ export default function KuramotoConsultationPage() {
                   </li>
                 </ul>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700">
-                恋愛、友人関係、将来の進路、家族のことなど、どんな小さなことでも大丈夫。温かい人柄の倉本さんが、きっと心に寄り添うアドバイスをしてくれるはずです！
-              </p>
             </div>
           </CardContent>
         </Card>
