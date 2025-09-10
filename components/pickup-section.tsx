@@ -99,6 +99,13 @@ export function PickupSection() {
       tags: ["音楽", "バンド", "世代交流"],
       href: "/plans/senior-band",
     },
+    {
+      title: "ピアノとアコーディオンの演奏会",
+      description: "音楽・演奏",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["音楽", "演奏", "クラシック"],
+      href: "/plans/piano-accordion",
+    },
   ]
 
   const displayedExperiencePlans = showAllExperience ? experiencePlans : experiencePlans.slice(0, 3)
