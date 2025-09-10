@@ -29,15 +29,19 @@ export default function PianoAccordionPage() {
           </div>
 
           <CardHeader>
-            <CardTitle className="text-3xl font-bold">ピアノとアコーディオンの演奏会</CardTitle>
-            <p className="text-lg text-gray-600">美しいピアノとアコーディオンの調べをお楽しみください！</p>
+            <CardTitle className="text-3xl font-bold">シオン</CardTitle>
+            <p className="text-lg text-gray-600">美しいピアノとアコーディオンの音色をお楽しみください！</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                ピアノとアコーディオンによる美しい演奏会を開催します！ぜひお気軽にご参加ください！
+                ー蜜月で出会う私たちー
+                ー途中で出会う愉快なたい焼き達…？ー
+                ーそして二度とない再会ー
+                全て違ったジャンル、構成で皆様を音楽の世界へご招待致します✨
+                皆さんと一緒に楽しむ演奏会、是非ご覧ください♪
               </p>
             </div>
 
