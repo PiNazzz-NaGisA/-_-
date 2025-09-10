@@ -30,7 +30,7 @@ export default function CommunicationCirclePage() {
 
           <CardHeader>
             <CardTitle className="text-3xl font-bold">コミュニケーションサークル発表</CardTitle>
-            <p className="text-lg text-gray-600">スピーチやプレゼンテーション技術の発表会をお楽しみください！</p>
+            <p className="text-lg text-gray-600">ドラマ化決定！</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
