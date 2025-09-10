@@ -30,14 +30,15 @@ export default function QuizContestPage() {
 
           <CardHeader>
             <CardTitle className="text-3xl font-bold">第1回福岡薬院クイズ王決定戦</CardTitle>
-            <p className="text-lg text-gray-600">知識自慢の皆さん、チームを組んで福岡薬院の初代クイズ王を目指そう！</p>
+            <p className="text-lg text-gray-600">観客参加型クイズ大会！</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                福岡薬院キャンパス初開催となるクイズ大会です！ぜひお気軽にご参加ください！
+                キャンフェスにて、ステージ企画：『第１回福岡薬院クイズ王決定戦』を行います！
+                優勝者には豪華景品も！？観客参加型なのでぜひご参加ください✨
               </p>
             </div>
 
