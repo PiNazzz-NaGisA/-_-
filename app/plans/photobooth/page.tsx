@@ -63,7 +63,7 @@ export default function PhotoboothPage() {
                     <strong>参加費:</strong> データ版 プリント版
                   </li>
                   <li>
-                    <strong>チケット販売:</strong> どなたでも参加可能
+                    <strong>チケット販売:</strong> 100円
                   </li>
                 </ul>
               </div>
