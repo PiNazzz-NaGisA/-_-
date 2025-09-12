@@ -50,13 +50,9 @@ export default function QuizContestPage() {
                     <strong>開催時間:</strong> 13:30 - 15:30
                   </li>
                   <li>
-                    <strong>場所:</strong> 大講義室
+                    <strong>場所:</strong> ステージ
                   </li>
                   <li>
-                    <strong>参加費:</strong> 無料
-                  </li>
-                  <li>
-                    <strong>チーム編成:</strong> 3〜4人1組
                   </li>
                 </ul>
               </div>
