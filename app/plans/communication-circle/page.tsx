@@ -51,6 +51,9 @@ export default function CommunicationCirclePage() {
                   <li>
                     <strong>場所:</strong>ステージ
                   </li>
+                  <li>
+                    <strong>チケットの料金:</strong> チケットなどはございません。誰でも自由にご覧になれます！
+                  </li>
                 </ul>
               </div>
             </div>
