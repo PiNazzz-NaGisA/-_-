@@ -51,12 +51,6 @@ export default function CommunicationCirclePage() {
                   <li>
                     <strong>場所:</strong> ステージ
                   </li>
-                  <li>
-                    <strong>参加費:</strong> 無料
-                  </li>
-                  <li>
-                    <strong>対象:</strong> どなたでも観覧・参加可能
-                  </li>
                 </ul>
               </div>
             </div>

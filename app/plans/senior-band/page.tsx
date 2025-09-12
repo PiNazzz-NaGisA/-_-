@@ -52,9 +52,6 @@ export default function SeniorBandPage() {
                     <strong>場所:</strong> ステージ
                   </li>
                   <li>
-                    <strong>参加費:</strong> 無料
-                  </li>
-                  <li>
                     <strong>座席:</strong> 椅子席50席（先着順）
                   </li>
                 </ul>

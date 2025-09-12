@@ -37,7 +37,7 @@ export default function NedFukuokaPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                この企画では、参加者が“推し”や“好きなこと”“自分の体験”などを語る「スピーチ部門」と、
+                この企画では、参加者が"推し"や"好きなこと""自分の体験"などを語る「スピーチ部門」と、
                 即興でお題に応える「スキル部門」で、プレゼン力をぶつけ合います！
                 あたたかい応援とリアクションで盛り上げてください！！
               </p>
@@ -52,12 +52,6 @@ export default function NedFukuokaPage() {
                   </li>
                   <li>
                     <strong>場所:</strong> ステージ
-                  </li>
-                  <li>
-                    <strong>参加費:</strong> 無料
-                  </li>
-                  <li>
-                    <strong>対象:</strong> どなたでも参加可能
                   </li>
                 </ul>
               </div>
