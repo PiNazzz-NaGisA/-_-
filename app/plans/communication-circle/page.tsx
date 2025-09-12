@@ -46,10 +46,10 @@ export default function CommunicationCirclePage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:13:15 ~ 13:35 </strong>
+                    <strong>開催時間:</strong>13:15 ~ 13:35 
                   </li>
                   <li>
-                    <strong>場所:ステージ</strong>
+                    <strong>場所:</strong>ステージ
                   </li>
                 </ul>
               </div>
