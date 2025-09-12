@@ -57,7 +57,7 @@ export default function FoodPage() {
                     <strong>販売方法:</strong> 完全チケット制
                   </li>
                   <li>
-                    <strong>チケットの料金:</strong> 各種パンケーキ200円 各種わらび餅ドリンク400円
+                    <strong>チケットの料金:</strong> 各種パンケーキ200円 各種わらび餅ドリンク400円 (チケットは数に限りがございます。)
                   </li>
                 </ul>
               </div>
