@@ -48,7 +48,7 @@ export default function FoodPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:15 - 15:45
+                    <strong>開催時間:</strong> 12:00 - 16:00
                   </li>
                   <li>
                     <strong>場所:</strong> 1階カフェテリア
