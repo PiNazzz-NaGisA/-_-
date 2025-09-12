@@ -49,7 +49,7 @@ export default function ProjectionPage() {
                     <strong>開催時間:</strong> 12:15 ~ 15:30
                   </li>
                   <li>
-                    <strong>場所:</strong> 2階多目的室
+                    <strong>場所:</strong> 中教室後方右側
                   </li>
                   <li>
                     <strong>参加費:</strong> 無料
