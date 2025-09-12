@@ -60,10 +60,10 @@ export default function PhotoboothPage() {
                     <strong>場所:</strong> 小教室横の面談室
                   </li>
                   <li>
-                    <strong>参加費:</strong> データ版無料、プリント版200円
+                    <strong>参加費:</strong> データ版 プリント版
                   </li>
                   <li>
-                    <strong>対象:</strong> どなたでも参加可能
+                    <strong>チケット販売:</strong> どなたでも参加可能
                   </li>
                 </ul>
               </div>
