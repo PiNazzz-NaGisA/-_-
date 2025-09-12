@@ -54,10 +54,10 @@ export default function FoodPage() {
                     <strong>場所:</strong> 1階カフェテリア
                   </li>
                   <li>
-                    <strong>参加費:</strong> パンケーキ各種・ドリンク各種
+                    <strong>販売方法:</strong> 完全チケット制
                   </li>
                   <li>
-                    <strong>販売数:</strong> 各商品限定100個
+                    <strong>チケットの料金:</strong> 各種パンケーキ200円 各種わらび餅ドリンク400円
                   </li>
                 </ul>
               </div>
