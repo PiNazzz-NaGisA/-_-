@@ -56,9 +56,6 @@ export default function NedFukuokaPage() {
                   <li>
                     <strong>参加費:</strong> 無料
                   </li>
-                  <li>
-                    <strong>対象:</strong> どなたでも参加可能
-                  </li>
                 </ul>
               </div>
             </div>

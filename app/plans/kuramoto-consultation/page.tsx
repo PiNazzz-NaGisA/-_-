@@ -58,9 +58,6 @@ export default function KuramotoConsultationPage() {
                   <li>
                     <strong>参加費:</strong> 無料
                   </li>
-                  <li>
-                    <strong>相談時間:</strong> 1人15分程度
-                  </li>
                 </ul>
               </div>
             </div>
