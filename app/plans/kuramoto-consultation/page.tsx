@@ -53,14 +53,9 @@ export default function KuramotoConsultationPage() {
                     <strong>開催時間:</strong> 15:20 ~ 15:30
                   </li>
                   <li>
-                    <strong>場所:</strong> 2階相談室
+                    <strong>場所:</strong> ステージ
                   </li>
-                  <li>
-                    <strong>参加費:</strong> 無料
-                  </li>
-                  <li>
-                    <strong>相談時間:</strong> 1人15分程度
-                  </li>
+
                 </ul>
               </div>
             </div>
