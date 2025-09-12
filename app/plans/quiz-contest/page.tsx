@@ -55,9 +55,6 @@ export default function QuizContestPage() {
                   <li>
                     <strong>参加費:</strong> 無料
                   </li>
-                  <li>
-                    <strong>チーム編成:</strong> 3〜4人1組
-                  </li>
                 </ul>
               </div>
             </div>
