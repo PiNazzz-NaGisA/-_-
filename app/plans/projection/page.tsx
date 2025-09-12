@@ -55,7 +55,7 @@ export default function ProjectionPage() {
                     <strong>参加費:</strong> 無料
                   </li>
                   <li>
-                    <strong>対象:</strong> どなたでも観覧可能
+                    <strong>チケット販売:</strong> どなたでも観覧可能
                   </li>
                 </ul>
               </div>
