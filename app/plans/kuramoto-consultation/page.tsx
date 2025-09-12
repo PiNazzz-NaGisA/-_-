@@ -50,7 +50,7 @@ export default function KuramotoConsultationPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 13:00 - 16:00
+                    <strong>開催時間:</strong> 15:20 ~ 15:30
                   </li>
                   <li>
                     <strong>場所:</strong> 2階相談室
