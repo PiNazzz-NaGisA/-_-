@@ -58,9 +58,6 @@ export default function PianoAccordionPage() {
                   <li>
                     <strong>参加費:</strong> 無料
                   </li>
-                  <li>
-                    <strong>座席:</strong> 椅子席40席（先着順）
-                  </li>
                 </ul>
               </div>
             </div>
