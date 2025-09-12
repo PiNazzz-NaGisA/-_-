@@ -56,7 +56,7 @@ export default function PianoAccordionPage() {
                     <strong>場所:</strong>
                   </li>
                   <li>
-                    <strong>参加費:</strong> 無料
+                    <strong>参加費:</strong>
                   </li>
                 </ul>
               </div>
