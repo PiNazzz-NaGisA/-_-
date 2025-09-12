@@ -48,7 +48,7 @@ export default function FoodPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:00 - 16:00
+                    <strong>開催時間:</strong> 12:15 - 15:45
                   </li>
                   <li>
                     <strong>場所:</strong> 1階カフェテリア
@@ -66,9 +66,9 @@ export default function FoodPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
               <p className="text-gray-700 mb-4">
-              パンケーキは「ハニーバター」「チョコ&ホイップ」「餡子を挟んだどら焼き風」の3種類のトッピングがあり好きな味をお選びいただけます！(トッピングごとに売り切れ次第終了)
-              「抹茶ラテ」と「ミルクティー」の2種類からお選びいただけます！
-              お好きな味をお選びください！
+                パンケーキは「ハニーバター」「チョコ&ホイップ」「餡子を挟んだどら焼き風」の3種類のトッピングがあり好きな味をお選びいただけます！(トッピングごとに売り切れ次第終了)
+                「抹茶ラテ」と「ミルクティー」の2種類からお選びいただけます！ お好きな味をお選びください！
+              </p>
             </div>
           </CardContent>
         </Card>
