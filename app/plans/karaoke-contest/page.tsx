@@ -52,9 +52,6 @@ export default function KaraokeContestPage() {
                   <li>
                     <strong>場所:</strong> ステージ
                   </li>
-                  <li>
-                    <strong>エントリー:</strong> 当日受付（14:30〜）
-                  </li>
                 </ul>
               </div>
             </div>
