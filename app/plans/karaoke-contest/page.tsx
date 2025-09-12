@@ -56,7 +56,7 @@ export default function KaraokeContestPage() {
                     <strong>参加費:</strong> 無料
                   </li>
                   <li>
-                    <strong>エントリー:</strong> 当日受付（14:30〜）
+                    <strong>エントリー:</strong> 
                   </li>
                 </ul>
               </div>
