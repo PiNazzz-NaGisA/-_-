@@ -50,10 +50,6 @@ export default function SeniorBandPage() {
                   </li>
                   <li>
                     <strong>場所:</strong> ステージ
-                  </li>
-                  <li>
-                    <strong>座席:</strong> 椅子席50席（先着順）
-                  </li>
                 </ul>
               </div>
             </div>
