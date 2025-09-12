@@ -51,10 +51,10 @@ export default function NedFukuokaPage() {
                     <strong>開催時間:12:15 ~ 12:45</strong>
                   </li>
                   <li>
-                    <strong>場所:</strong>
+                    <strong>場所:ステージ</strong>
                   </li>
                   <li>
-                    <strong>参加費:</strong>
+                    <strong>観覧費:無料、どなたでもご覧になれます！</strong>
                   </li>
                 </ul>
               </div>
