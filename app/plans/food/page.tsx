@@ -1,78 +1,77 @@
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeftIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
+import { ArrowLeft, Clock, MapPin } from "lucide-react"
 
 export default function FoodPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen">
+      <Header />
+      <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href="/#plans">
-            <Button variant="outline" className="group bg-transparent">
-              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-              企画一覧に戻る
+          <Link href="/">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              戻る
             </Button>
           </Link>
         </div>
 
-        <Card className="max-w-4xl mx-auto">
-          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=400&width=800&text=もちパンカフェ"
-              alt="もちパンカフェ"
-              width={800}
-              height={400}
-              className="w-full h-full object-cover"
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8">
+            <img
+              src="/placeholder.jpg?height=300&width=800&text=フード企画"
+              alt="フード企画"
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
 
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">もちパンカフェ</CardTitle>
-            <p className="text-lg text-gray-600">
-              わらびもちのドリンクとパンケーキを販売するカフェをお楽しみください！
-            </p>
-          </CardHeader>
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle className="text-3xl font-bold text-center">フード企画</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex items-center gap-4 text-lg">
+                <Clock className="h-5 w-5 text-blue-600" />
+                <span>10:00 - 17:00</span>
+              </div>
 
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
-              <p className="text-gray-700 leading-relaxed">
-                わらびもちのドリンクとパンケーキを販売するカフェ！３種のパンケーキとわらび餅ドリンクがあります！キャンフェスの思い出にぜひぜひ購入してください！！
-              </p>
-            </div>
+              <div className="flex items-center gap-4 text-lg">
+                <MapPin className="h-5 w-5 text-blue-600" />
+                <span>フードコート</span>
+              </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li>
-                    <strong>開催時間:</strong> 12:00 - 16:00
-                  </li>
-                  <li>
-                    <strong>場所:</strong> 1階カフェテリア
-                  </li>
-                  <li>
-                    <strong>参加費:</strong> パンケーキ各種・ドリンク各種
-                  </li>
-                  <li>
-                    <strong>販売数:</strong> 各商品限定100個
-                  </li>
+              <div className="prose max-w-none">
+                <h3 className="text-xl font-semibold mb-3">企画について</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  薬院キャンフェスの美味しいフード企画です。 地元の食材を使った特別メニューや、学生が手作りする
+                  心のこもった料理をお楽しみいただけます。
+                </p>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">メニュー</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>薬院特製カレー - 500円</li>
+                  <li>手作りサンドイッチ - 300円</li>
+                  <li>フレッシュジュース - 200円</li>
+                  <li>焼きそば - 400円</li>
+                  <li>たこ焼き - 350円</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">注意事項</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>現金のみの取り扱いとなります</li>
+                  <li>売り切れの場合はご了承ください</li>
+                  <li>アレルギーをお持ちの方は事前にお声がけください</li>
+                  <li>ゴミは指定の場所に捨ててください</li>
                 </ul>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700 mb-4">
-              パンケーキは「ハニーバター」「チョコ&ホイップ」「餡子を挟んだどら焼き風」の3種類のトッピングがあり好きな味をお選びいただけます！(トッピングごとに売り切れ次第終了)
-              「抹茶ラテ」と「ミルクティー」の2種類からお選びいただけます！
-              お好きな味をお選びください！
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }

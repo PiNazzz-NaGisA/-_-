@@ -1,72 +1,104 @@
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeftIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
+import { ArrowLeft, Clock, MapPin, Users, Pen as Yen } from "lucide-react"
 
 export default function PianoAccordionPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen">
+      <Header />
+      <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href="/#plans">
-            <Button variant="outline" className="group bg-transparent">
-              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-              企画一覧に戻る
+          <Link href="/">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              戻る
             </Button>
           </Link>
         </div>
 
-        <Card className="max-w-4xl mx-auto">
-          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=400&width=800&text=ピアノとアコーディオンの演奏会"
-              alt="ピアノとアコーディオンの演奏会"
-              width={800}
-              height={400}
-              className="w-full h-full object-cover"
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8">
+            <img
+              src="/placeholder.jpg?height=300&width=800&text=ピアノ・アコーディオン"
+              alt="ピアノ・アコーディオン"
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
 
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">シオン</CardTitle>
-            <p className="text-lg text-gray-600">美しいピアノとアコーディオンの音色をお楽しみください！</p>
-          </CardHeader>
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle className="text-3xl font-bold text-center">ピアノ・アコーディオン</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex items-center gap-4 text-lg">
+                <Clock className="h-5 w-5 text-blue-600" />
+                <span>11:00 - 15:00</span>
+              </div>
 
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
-              <p className="text-gray-700 leading-relaxed">
-                ー蜜月で出会う私たちー
-                ー途中で出会う愉快なたい焼き達…？ー
-                ーそして二度とない再会ー
-                全て違ったジャンル、構成で皆様を音楽の世界へご招待致します✨
-                皆さんと一緒に楽しむ演奏会、是非ご覧ください♪
-              </p>
-            </div>
+              <div className="flex items-center gap-4 text-lg">
+                <MapPin className="h-5 w-5 text-blue-600" />
+                <span>音楽ホール</span>
+              </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li>
-                    <strong>開催時間:</strong> 14:30 - 15:30
-                  </li>
-                  <li>
-                    <strong>場所:</strong> 音楽室
-                  </li>
-                  <li>
-                    <strong>参加費:</strong> 無料
-                  </li>
-                  <li>
-                    <strong>座席:</strong> 椅子席40席（先着順）
-                  </li>
+              <div className="flex items-center gap-4 text-lg">
+                <Yen className="h-5 w-5 text-blue-600" />
+                <span>無料</span>
+              </div>
+
+              <div className="flex items-center gap-4 text-lg">
+                <Users className="h-5 w-5 text-blue-600" />
+                <span>どなたでも</span>
+              </div>
+
+              <div className="prose max-w-none">
+                <h3 className="text-xl font-semibold mb-3">企画について</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  美しいピアノとアコーディオンの音色をお楽しみください。
+                  クラシックからポピュラーまで、様々なジャンルの楽曲を
+                  演奏いたします。心温まる音楽の時間をお過ごしください。
+                </p>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">演奏予定曲</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>クラシック名曲集</li>
+                  <li>日本の童謡・唱歌</li>
+                  <li>映画音楽</li>
+                  <li>ポピュラーソング</li>
+                  <li>アニメソング</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">演奏者</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>音楽科学生による演奏</li>
+                  <li>地域の音楽愛好家の皆様</li>
+                  <li>特別ゲスト演奏者</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">スケジュール</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>11:00-11:30 オープニング演奏</li>
+                  <li>12:00-12:30 クラシック特集</li>
+                  <li>13:00-13:30 ポピュラー特集</li>
+                  <li>14:00-14:30 リクエスト演奏</li>
+                  <li>14:30-15:00 フィナーレ</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">注意事項</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>演奏中の入退場は自由です</li>
+                  <li>静かに鑑賞をお願いします</li>
+                  <li>録音・録画はご遠慮ください</li>
+                  <li>携帯電話はマナーモードでお願いします</li>
                 </ul>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }

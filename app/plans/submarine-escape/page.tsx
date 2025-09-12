@@ -1,81 +1,110 @@
-import { Button } from "@/components/ui/button"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeftIcon } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
+import { ArrowLeft, Clock, MapPin, Users, Pen as Yen } from "lucide-react"
 
 export default function SubmarineEscapePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen">
+      <Header />
+      <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href="/#plans">
-            <Button variant="outline" className="group bg-transparent">
-              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-              企画一覧に戻る
+          <Link href="/">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              戻る
             </Button>
           </Link>
         </div>
 
-        <Card className="max-w-4xl mx-auto">
-          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=400&width=800&text=潜水艇脱出ゲーム"
-              alt="爆破しうる潜水艇からの脱出"
-              width={800}
-              height={400}
-              className="w-full h-full object-cover"
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8">
+            <img
+              src="/placeholder.jpg?height=300&width=800&text=潜水艦脱出ゲーム"
+              alt="潜水艦脱出ゲーム"
+              className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
           </div>
 
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">爆発しうる潜水艇からの脱出</CardTitle>
-            <p className="text-lg text-gray-600">爆発まで残り10分！？リアル脱出型謎解き</p>
-          </CardHeader>
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle className="text-3xl font-bold text-center">潜水艦脱出ゲーム</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex items-center gap-4 text-lg">
+                <Clock className="h-5 w-5 text-blue-600" />
+                <span>10:00 - 17:00</span>
+              </div>
 
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
-              <p className="text-gray-700 leading-relaxed">
-                『おめでとうございます！あなたは深海観光ツアーに当選しました！』
-                連絡を受け、潜水艇に乗るあなたたち。
-                深く潜ったそのとき、船内に突如アナウンスが響く。
-                「この船は10分後に爆発します。」
-                生き残るには、船に仕掛けられた爆弾を解除するしかない。
-                仲間と協力し、無事に帰ることはできるのか——
-              </p>
-            </div>
+              <div className="flex items-center gap-4 text-lg">
+                <MapPin className="h-5 w-5 text-blue-600" />
+                <span>特設会場</span>
+              </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <ul className="space-y-2">
-                  <li>
-                    <strong>開催時間:</strong> 12:30 - 17:00
-                  </li>
-                  <li>
-                    <strong>場所:</strong> 地下実習室（特別セット）
-                  </li>
-                  <li>
-                    <strong>参加費:</strong> 1人 500円
-                  </li>
+              <div className="flex items-center gap-4 text-lg">
+                <Yen className="h-5 w-5 text-blue-600" />
+                <span>500円/チーム</span>
+              </div>
+
+              <div className="flex items-center gap-4 text-lg">
+                <Users className="h-5 w-5 text-blue-600" />
+                <span>3-6人チーム</span>
+              </div>
+
+              <div className="prose max-w-none">
+                <h3 className="text-xl font-semibold mb-3">企画について</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  チームワークと知恵を駆使して潜水艦からの脱出を目指す
+                  リアル脱出ゲームです！様々な謎解きや仕掛けが待ち受けています。 制限時間内に脱出できるでしょうか？
+                </p>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">ゲーム内容</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>制限時間60分の脱出ゲーム</li>
+                  <li>潜水艦をテーマにした謎解き</li>
+                  <li>チーム全員で協力して挑戦</li>
+                  <li>複数の部屋を移動しながら進行</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">難易度</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>初心者から上級者まで楽しめる設計</li>
+                  <li>ヒント機能あり（回数制限あり）</li>
+                  <li>段階的に難しくなる謎解き</li>
+                  <li>最終的な脱出成功率は約30%</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">参加方法</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>当日受付または事前予約</li>
+                  <li>3-6人でチームを組んで参加</li>
+                  <li>1日8回開催（各回60分）</li>
+                  <li>各回定員18名（3チーム同時進行）</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">特典</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>脱出成功チームには認定証をプレゼント</li>
+                  <li>記念撮影コーナーあり</li>
+                  <li>参加者全員にオリジナルステッカー</li>
+                  <li>最速脱出チームには特別賞品</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3 mt-6">注意事項</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <li>小学生以下は保護者同伴でお願いします</li>
+                  <li>携帯電話の使用は禁止です</li>
+                  <li>ゲーム中の写真撮影はご遠慮ください</li>
+                  <li>体調不良の方は参加をお控えください</li>
                 </ul>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
-              <p className="text-gray-700">
-                潜水艇をテーマに制作しました。
-                教室全体を一つの潜水艇に見立て、没入感のある世界観を目指しました！参加者が物語の中に入り込めるように空間全体を作り込んでいます。
-                難易度も初心者の方でも楽しめるように設定しています。
-                謎解きが初めてでも、友達と協力すればきっとクリアできるはず。どなたでもお気軽にご参加ください！
-
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }

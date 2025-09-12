@@ -7,9 +7,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    domains: ['placeholder.svg'],
     unoptimized: true,
   },
-  // Additional configurations can be added here
 }
 
 export default nextConfig

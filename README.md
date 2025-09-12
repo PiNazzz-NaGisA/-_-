@@ -1,41 +1,21 @@
 # 薬院キャンフェス
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+薬院キャンパスフェスティバルの公式ウェブサイトです。
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/gpts-projects-0c28f523/v0-)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/vUQiNAMfhsm)
+## 技術スタック
 
-## Overview
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 開発
 
-## Deployment
+\`\`\`bash
+npm install
+npm run dev
+\`\`\`
 
-Your project is live at:
+## デプロイ
 
-**[https://vercel.com/gpts-projects-0c28f523/v0-](https://vercel.com/gpts-projects-0c28f523/v0-)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/vUQiNAMfhsm](https://v0.dev/chat/projects/vUQiNAMfhsm)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
-
-## Backend API
-
-This project now includes simple API routes implemented with Next.js.
-
-- `GET /api/events` - Retrieve a list of festival events.
-- `POST /api/events` - Add a new event.
-- `GET /api/contact` - Retrieve submitted contact messages.
-- `POST /api/contact` - Submit a new contact message.
-
-These endpoints use in-memory data storage and are intended for demonstration.
+Vercelにデプロイされています。
