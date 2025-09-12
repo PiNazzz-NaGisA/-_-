@@ -59,9 +59,6 @@ export default function SubmarineEscapePage() {
                   <li>
                     <strong>参加費:</strong> 1人 500円
                   </li>
-                  <li>
-                    <strong>チーム編成:</strong> 4〜6人1組
-                  </li>
                 </ul>
               </div>
             </div>
