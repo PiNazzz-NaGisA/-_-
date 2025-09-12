@@ -49,16 +49,16 @@ export default function FloraPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 
+                    <strong>開催時間:</strong> 13:00 - 16:30
                   </li>
                   <li>
-                    <strong>場所:</strong> 
+                    <strong>場所:</strong> 3階多目的室
                   </li>
                   <li>
-                    <strong>参加費:</strong> 
+                    <strong>参加費:</strong> フローティングフレーム制作体験
                   </li>
                   <li>
-                    <strong>定員:</strong> 
+                    <strong>定員:</strong> 各回8名
                   </li>
                 </ul>
               </div>

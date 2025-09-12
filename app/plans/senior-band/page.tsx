@@ -46,16 +46,16 @@ export default function SeniorBandPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong>
+                    <strong>開催時間:</strong> 16:00 - 17:00
                   </li>
                   <li>
-                    <strong>場所:</strong>
+                    <strong>場所:</strong> 中庭特設ステージ
                   </li>
                   <li>
-                    <strong>参加費:</strong>
+                    <strong>参加費:</strong> 無料
                   </li>
                   <li>
-                    <strong>座席:</strong>
+                    <strong>座席:</strong> 椅子席50席（先着順）
                   </li>
                 </ul>
               </div>

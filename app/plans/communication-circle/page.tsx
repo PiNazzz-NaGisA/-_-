@@ -46,13 +46,16 @@ export default function CommunicationCirclePage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong>13:15 ~ 13:35 
+                    <strong>開催時間:</strong> 14:00 - 16:00
                   </li>
                   <li>
-                    <strong>場所:</strong>ステージ
+                    <strong>場所:</strong> 大講義室
                   </li>
                   <li>
-                    <strong>チケットの料金:</strong> チケットなどはございません。誰でも自由にご覧になれます！
+                    <strong>参加費:</strong> 無料
+                  </li>
+                  <li>
+                    <strong>対象:</strong> どなたでも観覧・参加可能
                   </li>
                 </ul>
               </div>

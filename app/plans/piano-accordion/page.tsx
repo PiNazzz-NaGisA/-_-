@@ -50,13 +50,16 @@ export default function PianoAccordionPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong>
+                    <strong>開催時間:</strong> 14:30 - 15:30
                   </li>
                   <li>
-                    <strong>場所:</strong>
+                    <strong>場所:</strong> 音楽室
                   </li>
                   <li>
-                    <strong>参加費:</strong>
+                    <strong>参加費:</strong> 無料
+                  </li>
+                  <li>
+                    <strong>座席:</strong> 椅子席40席（先着順）
                   </li>
                 </ul>
               </div>

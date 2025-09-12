@@ -51,16 +51,16 @@ export default function SubmarineEscapePage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong>12:00 ~ 15;00
+                    <strong>開催時間:</strong> 12:30 - 17:00
                   </li>
                   <li>
-                    <strong>場所:</strong> 小教室
+                    <strong>場所:</strong> 地下実習室（特別セット）
                   </li>
                   <li>
-                    <strong>参加方法:</strong> 完全チケット制
+                    <strong>参加費:</strong> 1人 500円
                   </li>
                   <li>
-                    <strong>チケット販売:</strong> 
+                    <strong>チーム編成:</strong> 4〜6人1組
                   </li>
                 </ul>
               </div>

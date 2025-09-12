@@ -54,16 +54,16 @@ export default function PhotoboothPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:15 ~ 15:45
+                    <strong>開催時間:</strong> 13:00 - 16:00
                   </li>
                   <li>
-                    <strong>場所:</strong> 小教室横の面談室
+                    <strong>場所:</strong> 2階 多目的室
                   </li>
                   <li>
-                    <strong>参加費:</strong> データ版 プリント版
+                    <strong>参加費:</strong> データ版無料、プリント版200円
                   </li>
                   <li>
-                    <strong>チケット販売:</strong> 100円
+                    <strong>対象:</strong> どなたでも参加可能
                   </li>
                 </ul>
               </div>

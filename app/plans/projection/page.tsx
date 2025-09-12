@@ -46,16 +46,16 @@ export default function ProjectionPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:15 ~ 15:30
+                    <strong>開催時間:</strong> 12:00 - 16:00
                   </li>
                   <li>
-                    <strong>場所:</strong>中教室 後方 右側
+                    <strong>場所:</strong> 2階多目的室
                   </li>
                   <li>
                     <strong>参加費:</strong> 無料
                   </li>
                   <li>
-                    <strong>チケット販売:</strong> どなたでも観覧可能
+                    <strong>対象:</strong> どなたでも観覧可能
                   </li>
                 </ul>
               </div>

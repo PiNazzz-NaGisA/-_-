@@ -47,13 +47,16 @@ export default function QuizContestPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong>
+                    <strong>開催時間:</strong> 13:30 - 15:30
                   </li>
                   <li>
-                    <strong>場所:</strong>
+                    <strong>場所:</strong> 大講義室
                   </li>
                   <li>
-                    <strong>参加費:</strong>
+                    <strong>参加費:</strong> 無料
+                  </li>
+                  <li>
+                    <strong>チーム編成:</strong> 3〜4人1組
                   </li>
                 </ul>
               </div>

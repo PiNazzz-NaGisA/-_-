@@ -48,16 +48,16 @@ export default function FoodPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 
+                    <strong>開催時間:</strong> 12:15 - 15:45
                   </li>
                   <li>
-                    <strong>場所:</strong> 
+                    <strong>場所:</strong> 1階カフェテリア
                   </li>
                   <li>
-                    <strong>販売方法:</strong> 完全チケット制
+                    <strong>参加費:</strong> パンケーキ各種・ドリンク各種
                   </li>
                   <li>
-                    <strong>チケットの料金:</strong> 各種パンケーキ200円 各種わらび餅ドリンク400円 (チケットは数に限りがございます。)
+                    <strong>販売数:</strong> 各商品限定100個
                   </li>
                 </ul>
               </div>

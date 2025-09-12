@@ -50,13 +50,16 @@ export default function KuramotoConsultationPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong>
+                    <strong>開催時間:</strong> 13:00 - 16:00
                   </li>
                   <li>
-                    <strong>場所:</strong>
+                    <strong>場所:</strong> 2階相談室
                   </li>
                   <li>
-                    <strong>参加費:</strong>
+                    <strong>参加費:</strong> 無料
+                  </li>
+                  <li>
+                    <strong>相談時間:</strong> 1人15分程度
                   </li>
                 </ul>
               </div>
