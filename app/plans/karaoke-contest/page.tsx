@@ -47,10 +47,10 @@ export default function KaraokeContestPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 15:00 - 17:00
+                    <strong>開催時間:</strong> 14:05 - 14:35
                   </li>
                   <li>
-                    <strong>場所:</strong> 体育館（特設ステージ）
+                    <strong>場所:</strong> ステージ
                   </li>
                   <li>
                     <strong>参加費:</strong> 無料

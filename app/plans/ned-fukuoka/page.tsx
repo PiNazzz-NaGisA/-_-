@@ -48,10 +48,10 @@ export default function NedFukuokaPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:00 - 17:00
+                    <strong>開催時間:</strong> 12:15 - 12:45
                   </li>
                   <li>
-                    <strong>場所:</strong> 校内各所（パビリオン形式）
+                    <strong>場所:</strong> ステージ
                   </li>
                   <li>
                     <strong>参加費:</strong> 無料
