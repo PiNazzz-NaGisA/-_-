@@ -48,7 +48,7 @@ export default function PancakePlanPage() {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">販売時間</h3>
-                  <p className="text-gray-700">12:00 - 16:00</p>
+                  <p className="text-gray-700">12:15 ~ 15:45</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">場所</h3>
