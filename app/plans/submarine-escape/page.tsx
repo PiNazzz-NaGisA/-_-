@@ -51,7 +51,7 @@ export default function SubmarineEscapePage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:30 - 17:00
+                    <strong>開催時間:</strong> 12:30 ~ 17:00
                   </li>
                   <li>
                     <strong>場所:</strong> 地下実習室（特別セット）
