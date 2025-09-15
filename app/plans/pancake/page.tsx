@@ -52,11 +52,11 @@ export default function PancakePlanPage() {
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">場所</h3>
-                  <p className="text-gray-700">カフェテリア前</p>
+                  <p className="text-gray-700">中教室</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">価格</h3>
-                  <p className="text-gray-700">300円〜500円</p>
+                  <p className="text-gray-700"></p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">数量</h3>
