@@ -106,21 +106,24 @@ export function PickupSection() {
 
   const PlanCard = ({ plan, index }: { plan: any; index: number }) => (
     <Link key={index} href={plan.href}>
-      <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 transform">
+      <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 transform h-full">
         <Image
           src={plan.image || "/placeholder.svg"}
           alt={plan.title}
           width={400}
           height={250}
-          className="w-full h-48 object-cover"
+          className="w-full h-40 md:h-48 object-cover"
         />
-        <CardHeader>
-          <CardTitle className="text-xl font-semibold">{plan.title}</CardTitle>
-          <CardDescription className="text-gray-600">{plan.description}</CardDescription>
+        <CardHeader className="p-3 md:p-6">
+          <CardTitle className="text-lg md:text-xl font-semibold line-clamp-2">{plan.title}</CardTitle>
+          <CardDescription className="text-gray-600 text-sm md:text-base">{plan.description}</CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-wrap gap-2 mt-auto">
+        <CardContent className="flex flex-wrap gap-1 md:gap-2 mt-auto p-3 md:p-6 pt-0">
           {plan.tags.map((tag: string, tagIndex: number) => (
-            <span key={tagIndex} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+            <span
+              key={tagIndex}
+              className="px-2 md:px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full"
+            >
               {tag}
             </span>
           ))}
@@ -132,25 +135,25 @@ export function PickupSection() {
   return (
     <section id="plans" className="py-12 md:py-20 bg-gray-50">
       <div className="container px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">企画紹介</h2>
+        <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-10">企画紹介</h2>
 
         {/* 体験型企画 */}
-        <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">体験型企画</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mb-12 md:mb-16">
+          <h3 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-8">体験型企画</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {displayedExperiencePlans.map((plan, index) => (
               <PlanCard key={index} plan={plan} index={index} />
             ))}
           </div>
-          <div className="text-center mt-8">
+          <div className="text-center mt-6 md:mt-8">
             <Button
               variant="outline"
-              className="group bg-transparent"
+              className="group bg-transparent text-sm md:text-base px-4 md:px-6 py-2 md:py-3"
               onClick={() => setShowAllExperience(!showAllExperience)}
             >
               {showAllExperience ? "体験型企画を閉じる" : "体験型企画一覧をみる"}
               <ArrowRightIcon
-                className={`ml-2 h-4 w-4 transition-transform ${showAllExperience ? "rotate-180" : "group-hover:translate-x-1"}`}
+                className={`ml-2 h-3 w-3 md:h-4 md:w-4 transition-transform ${showAllExperience ? "rotate-180" : "group-hover:translate-x-1"}`}
               />
             </Button>
           </div>
@@ -158,17 +161,21 @@ export function PickupSection() {
 
         {/* ステージ企画 */}
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">ステージ企画</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h3 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-8">ステージ企画</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {displayedStagePlans.map((plan, index) => (
               <PlanCard key={index} plan={plan} index={index} />
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Button variant="outline" className="group bg-transparent" onClick={() => setShowAllStage(!showAllStage)}>
+          <div className="text-center mt-6 md:mt-8">
+            <Button
+              variant="outline"
+              className="group bg-transparent text-sm md:text-base px-4 md:px-6 py-2 md:py-3"
+              onClick={() => setShowAllStage(!showAllStage)}
+            >
               {showAllStage ? "ステージ企画を閉じる" : "ステージ企画一覧をみる"}
               <ArrowRightIcon
-                className={`ml-2 h-4 w-4 transition-transform ${showAllStage ? "rotate-180" : "group-hover:translate-x-1"}`}
+                className={`ml-2 h-3 w-3 md:h-4 md:w-4 transition-transform ${showAllStage ? "rotate-180" : "group-hover:translate-x-1"}`}
               />
             </Button>
           </div>
