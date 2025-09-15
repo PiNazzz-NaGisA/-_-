@@ -1,79 +1,70 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ArrowLeftIcon } from "lucide-react"
 import Link from "next/link"
-import { ArrowLeft, Clock, MapPin } from "lucide-react"
+import Image from "next/image"
 
 export default function KaraokeContestPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href="/">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              戻る
+          <Link href="/#plans">
+            <Button variant="outline" className="group bg-transparent">
+              <ArrowLeftIcon className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
+              企画一覧に戻る
             </Button>
           </Link>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <img src="/-------.jpg" alt="カラオケ大会" className="w-full h-64 object-cover rounded-lg shadow-lg" />
+        <Card className="max-w-4xl mx-auto">
+          <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
+            <Image
+              src="/placeholder.svg?height=400&width=800&text=カラオケ大会"
+              alt="カラオケ大会 ~ in 福岡薬院 ~"
+              width={800}
+              height={400}
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle className="text-3xl font-bold text-center">カラオケ大会</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="flex items-center gap-4 text-lg">
-                <Clock className="h-5 w-5 text-blue-600" />
-                <span>13:00 - 16:00</span>
-              </div>
+          <CardHeader>
+            <CardTitle className="text-3xl font-bold">カラオケ大会 ~ in 福岡薬院 ~</CardTitle>
+            <p className="text-lg text-gray-600">歌自慢の皆さん集合！福岡薬院初のカラオケ大会をお楽しみください！</p>
+          </CardHeader>
 
-              <div className="flex items-center gap-4 text-lg">
-                <MapPin className="h-5 w-5 text-blue-600" />
-                <span>メインステージ</span>
-              </div>
+          <CardContent className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-3">企画概要</h3>
+              <p className="text-gray-700 leading-relaxed">
+                キャンフェスステージにて、カラオケ大会を開催します！！
+                上手い・下手関係なしに、みんなで盛り上がりましょう！
+              </p>
+            </div>
 
-              <div className="prose max-w-none">
-                <h3 className="text-xl font-semibold mb-3">企画について</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  薬院キャンフェス恒例のカラオケ大会です！ 学生、教職員、地域の皆様どなたでも参加できる
-                  楽しいカラオケコンテストを開催します。
-                </p>
-
-                <h3 className="text-xl font-semibold mb-3 mt-6">参加方法</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>当日受付で参加申し込み</li>
-                  <li>1人1曲まで（時間の都合により変更の場合あり）</li>
-                  <li>楽曲は事前に用意されたリストから選択</li>
-                  <li>優秀者には素敵な賞品をプレゼント</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold mb-3 mt-6">審査基準</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>歌唱力</li>
-                  <li>パフォーマンス</li>
-                  <li>観客の盛り上がり</li>
-                  <li>オリジナリティ</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold mb-3 mt-6">注意事項</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>参加希望者多数の場合は抽選となります</li>
-                  <li>不適切な楽曲の選択はご遠慮ください</li>
-                  <li>マイクの取り扱いにご注意ください</li>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">開催情報</h3>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <ul className="space-y-2">
+                  <li>
+                    <strong>開催時間:</strong> 13:35 ~ 14:05
+                  </li>
+                  <li>
+                    <strong>場所:</strong> ステージ
+                  </li>
                 </ul>
               </div>
-            </CardContent>
-          </Card>
-        </div>
-      </main>
-      <Footer />
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-3">こだわりポイント！</h3>
+              <p className="text-gray-700">
+                歌自慢の皆さんはもちろん、普段は人前で歌わない方も気軽に参加できるアットホームな雰囲気の大会です。様々な部門を設けているので、どなたでも楽しく参加していただけます！
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }

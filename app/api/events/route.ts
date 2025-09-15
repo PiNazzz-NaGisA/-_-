@@ -1,37 +1,33 @@
 import { NextResponse } from "next/server"
 
-// サンプルイベントデータ
-const events = [
+interface Event {
+  id: number
+  title: string
+  description: string
+  datetime: string
+}
+
+let events: Event[] = [
   {
     id: 1,
-    name: "NED福岡",
-    date: "2024-11-16",
-    time: "10:00-17:00",
-    location: "メインステージ",
-  },
-  {
-    id: 2,
-    name: "コミュニケーション・サークル",
-    date: "2024-11-16",
-    time: "11:00-16:00",
-    location: "メインステージ",
-  },
-  {
-    id: 3,
-    name: "先輩会バンド",
-    date: "2024-11-16",
-    time: "12:00-15:00",
-    location: "メインステージ",
-  },
-  {
-    id: 4,
-    name: "カラオケ大会",
-    date: "2024-11-16",
-    time: "13:00-16:00",
-    location: "メインステージ",
+    title: "オープニングセレモニー",
+    description: "イベント開始を盛り上げるセレモニー",
+    datetime: "2025-09-20T12:00:00+09:00",
   },
 ]
 
 export async function GET() {
-  return NextResponse.json(events)
+  return NextResponse.json({ events })
+}
+
+export async function POST(request: Request) {
+  const body = await request.json()
+  const newEvent: Event = {
+    id: events.length + 1,
+    title: body.title,
+    description: body.description,
+    datetime: body.datetime,
+  }
+  events.push(newEvent)
+  return NextResponse.json(newEvent, { status: 201 })
 }

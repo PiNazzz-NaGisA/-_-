@@ -1,20 +1,35 @@
 "use client"
 
-import { useCallback } from "react"
+import { useEffect } from "react"
 
 export function useSmoothScroll() {
-  const smoothScroll = useCallback((targetId: string) => {
-    const element = document.getElementById(targetId.replace("#", ""))
-    if (element) {
-      const headerHeight = 64 // ヘッダーの高さ
-      const elementPosition = element.offsetTop - headerHeight
+  useEffect(() => {
+    const handleAnchorClick = (e: Event) => {
+      const target = e.target as HTMLAnchorElement
+      if (target.tagName === "A" && target.href.includes("#")) {
+        const href = target.getAttribute("href")
+        if (!href || href.length <= 1 || href === "#") {
+          return
+        }
 
-      window.scrollTo({
-        top: elementPosition,
-        behavior: "smooth",
-      })
+        try {
+          const targetId = href.substring(1)
+          const targetElement = document.querySelector(`#${targetId}`)
+
+          if (targetElement) {
+            e.preventDefault()
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        } catch (error) {
+          console.warn("Invalid selector:", href)
+        }
+      }
     }
-  }, [])
 
-  return smoothScroll
+    document.addEventListener("click", handleAnchorClick)
+    return () => document.removeEventListener("click", handleAnchorClick)
+  }, [])
 }

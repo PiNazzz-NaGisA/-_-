@@ -1,149 +1,177 @@
-import Link from "next/link"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Clock, MapPin } from "lucide-react"
+import { ArrowRightIcon } from "lucide-react"
+import Link from "next/link"
+import { useState } from "react"
 
 export function PickupSection() {
-  const pickupEvents = [
-    // ステージ企画（指定された順序）
+  const [showAllExperience, setShowAllExperience] = useState(false)
+  const [showAllStage, setShowAllStage] = useState(false)
+
+  const experiencePlans = [
     {
-      id: "ned-fukuoka",
-      title: "NED福岡",
-      description: "エネルギッシュなパフォーマンスと観客との一体感を大切にしたステージをお届けします。",
-      image: "/ned------.jpg",
-      time: "10:00 - 17:00",
-      location: "メインステージ",
-      category: "ステージ企画",
-    },
-    {
-      id: "communication-circle",
-      title: "コミュニケーション・サークル",
-      description: "様々な表現を通じて、観客の皆様とのコミュニケーションを大切にした楽しいステージをお届けします。",
-      image: "/-----------.jpg",
-      time: "11:00 - 16:00",
-      location: "メインステージ",
-      category: "ステージ企画",
-    },
-    {
-      id: "senior-band",
-      title: "先輩会バンド",
-      description: "薬院の先輩方によるバンド演奏です。長年培った音楽経験と情熱を込めた演奏で、会場を盛り上げます。",
-      image: "/----------.jpg",
-      time: "12:00 - 15:00",
-      location: "メインステージ",
-      category: "ステージ企画",
-    },
-    {
-      id: "karaoke-contest",
-      title: "カラオケ大会",
-      description: "薬院キャンフェス恒例のカラオケ大会です！学生、教職員、地域の皆様どなたでも参加できます。",
-      image: "/-------.jpg",
-      time: "13:00 - 16:00",
-      location: "メインステージ",
-      category: "ステージ企画",
-    },
-    // その他の企画
-    {
-      id: "food",
-      title: "フード企画",
-      description: "地元の食材を使った特別メニューや、学生が手作りする心のこもった料理をお楽しみいただけます。",
-      image: "/placeholder.jpg?height=200&width=300&text=フード企画",
-      time: "10:00 - 17:00",
-      location: "フードコート",
-      category: "フード",
-    },
-    {
-      id: "pancake",
-      title: "パンケーキ",
-      description: "ふわふわで美味しい手作りパンケーキをご提供します。様々なトッピングをご用意しています。",
-      image: "/placeholder.jpg?height=200&width=300&text=パンケーキ",
-      time: "10:00 - 16:00",
-      location: "フードエリア",
-      category: "フード",
-    },
-    {
-      id: "warabimochi",
-      title: "わらび餅",
-      description: "手作りの美味しいわらび餅をご提供します。ぷるぷるとした食感と上品な甘さが自慢です。",
-      image: "/placeholder.jpg?height=200&width=300&text=わらび餅",
-      time: "11:00 - 16:00",
-      location: "和菓子コーナー",
-      category: "フード",
-    },
-    {
-      id: "quiz-contest",
-      title: "クイズ大会",
-      description: "知識と知恵を競う楽しいクイズ大会です！チーム戦で協力しながら挑戦していただけます。",
-      image: "/placeholder.jpg?height=200&width=300&text=クイズ大会",
-      time: "13:00 - 15:00",
-      location: "講堂",
-      category: "体験",
-    },
-    {
-      id: "submarine-escape",
-      title: "潜水艦脱出ゲーム",
-      description: "チームワークと知恵を駆使して潜水艦からの脱出を目指すリアル脱出ゲームです！",
-      image: "/placeholder.jpg?height=200&width=300&text=潜水艦脱出ゲーム",
-      time: "10:00 - 17:00",
-      location: "特設会場",
-      category: "体験",
-    },
-    {
-      id: "shooting",
       title: "射的",
-      description: "昔懐かしい射的ゲームです！コルクガンを使って的を狙い撃ちしてください。",
-      image: "/placeholder.jpg?height=200&width=300&text=射的",
-      time: "10:00 - 17:00",
-      location: "ゲームコーナー",
-      category: "体験",
+      description: "企画班",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["企画班", "ゲーム"],
+      href: "/plans/shooting",
     },
     {
-      id: "photobooth",
-      title: "フォトブース",
-      description: "薬院キャンフェスの思い出を写真に残しませんか？可愛い背景やプロップスをご用意しています。",
-      image: "/placeholder.jpg?height=200&width=300&text=フォトブース",
-      time: "10:00 - 17:00",
-      location: "エントランス",
-      category: "体験",
+      title: "fact photo -in campus festival-",
+      description: "企画班",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["企画班", "写真"],
+      href: "/plans/photobooth",
+    },
+    {
+      title: "プロジェクションマッピングin夏の思い出",
+      description: "企画班",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["企画班", "アート"],
+      href: "/plans/projection",
+    },
+    {
+      title: "もちパンカフェ",
+      description: "物販",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["物販", "フード", "ドリンク"],
+      href: "/plans/food",
+    },
+    {
+      title: "FLOLA（フローラ）",
+      description: "物販・体験",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["物販", "ワークショップ", "体験"],
+      href: "/plans/weekly1-workshop",
+    },
+    {
+      title: "爆破しうる潜水艇からの脱出",
+      description: "脱出ゲーム",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["脱出ゲーム", "謎解き", "チームワーク"],
+      href: "/plans/submarine-escape",
     },
   ]
 
-  return (
-    <section id="pickup" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">ピックアップ企画</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pickupEvents.map((event) => (
-            <Card key={event.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="aspect-video relative overflow-hidden">
-                <img src={event.image || "/placeholder.svg"} alt={event.title} className="w-full h-full object-cover" />
-                <div className="absolute top-2 left-2">
-                  <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs font-medium">{event.category}</span>
-                </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{event.title}</CardTitle>
-                <div className="flex items-center gap-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>{event.time}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" />
-                    <span>{event.location}</span>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4 line-clamp-3">{event.description}</p>
-                <Link href={`/plans/${event.id}`}>
-                  <Button variant="outline" className="w-full bg-transparent">
-                    詳細を見る
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+  const stagePlans = [
+    {
+      title: "NED in 福岡薬院万博2025",
+      description: "特別企画",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["特別企画", "地域交流"],
+      href: "/plans/ned-fukuoka",
+    },
+    {
+      title: "コミュニケーションサークル発表",
+      description: "発表・交流",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["発表", "コミュニケーション"],
+      href: "/plans/communication-circle",
+    },
+    {
+      title: "倉本さんのお悩み相談室",
+      description: "相談・交流",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["相談", "交流", "人生"],
+      href: "/plans/kuramoto-consultation",
+    },
+    {
+      title: "第1回福岡薬院クイズ王決定戦",
+      description: "クイズ大会",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["クイズ", "大会", "知識"],
+      href: "/plans/quiz-contest",
+    },
+    {
+      title: "カラオケ大会 ~ in 福岡薬院 ~",
+      description: "エンターテイメント",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["音楽", "大会", "エンタメ"],
+      href: "/plans/karaoke-contest",
+    },
+    {
+      title: "薬院老人会によるバンド演奏",
+      description: "音楽・演奏",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["音楽", "バンド", "世代交流"],
+      href: "/plans/senior-band",
+    },
+  ]
+
+  const displayedExperiencePlans = showAllExperience ? experiencePlans : experiencePlans.slice(0, 3)
+  const displayedStagePlans = showAllStage ? stagePlans : stagePlans.slice(0, 3)
+
+  const PlanCard = ({ plan, index }: { plan: any; index: number }) => (
+    <Link key={index} href={plan.href}>
+      <Card className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105 transform">
+        <Image
+          src={plan.image || "/placeholder.svg"}
+          alt={plan.title}
+          width={400}
+          height={250}
+          className="w-full h-48 object-cover"
+        />
+        <CardHeader>
+          <CardTitle className="text-xl font-semibold">{plan.title}</CardTitle>
+          <CardDescription className="text-gray-600">{plan.description}</CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-wrap gap-2 mt-auto">
+          {plan.tags.map((tag: string, tagIndex: number) => (
+            <span key={tagIndex} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
+              {tag}
+            </span>
           ))}
+        </CardContent>
+      </Card>
+    </Link>
+  )
+
+  return (
+    <section id="plans" className="py-12 md:py-20 bg-gray-50">
+      <div className="container px-4 md:px-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">企画紹介</h2>
+
+        {/* 体験型企画 */}
+        <div className="mb-16">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">体験型企画</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {displayedExperiencePlans.map((plan, index) => (
+              <PlanCard key={index} plan={plan} index={index} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button
+              variant="outline"
+              className="group bg-transparent"
+              onClick={() => setShowAllExperience(!showAllExperience)}
+            >
+              {showAllExperience ? "体験型企画を閉じる" : "体験型企画一覧をみる"}
+              <ArrowRightIcon
+                className={`ml-2 h-4 w-4 transition-transform ${showAllExperience ? "rotate-180" : "group-hover:translate-x-1"}`}
+              />
+            </Button>
+          </div>
+        </div>
+
+        {/* ステージ企画 */}
+        <div>
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">ステージ企画</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {displayedStagePlans.map((plan, index) => (
+              <PlanCard key={index} plan={plan} index={index} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="outline" className="group bg-transparent" onClick={() => setShowAllStage(!showAllStage)}>
+              {showAllStage ? "ステージ企画を閉じる" : "ステージ企画一覧をみる"}
+              <ArrowRightIcon
+                className={`ml-2 h-4 w-4 transition-transform ${showAllStage ? "rotate-180" : "group-hover:translate-x-1"}`}
+              />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

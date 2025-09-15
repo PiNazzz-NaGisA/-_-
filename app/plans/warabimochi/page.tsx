@@ -1,99 +1,153 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
-import { ArrowLeft, Clock, MapPin, Users, Pen as Yen } from "lucide-react"
+import Image from "next/image"
 
-export default function WarabimochiPage() {
+export default function WarabimochiPlanPage() {
   return (
-    <div className="min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="container mx-auto px-4 py-8">
+      <main className="flex-1 max-w-screen-xl mx-auto w-full px-4 py-8">
         <div className="mb-6">
-          <Link href="/">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              戻る
+          <Link href="/#plans">
+            <Button variant="outline" className="flex items-center gap-2 bg-transparent">
+              <ArrowLeft className="h-4 w-4" />
+              企画一覧に戻る
             </Button>
           </Link>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <img
-              src="/placeholder.jpg?height=300&width=800&text=わらび餅"
-              alt="わらび餅"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="relative h-64 md:h-96">
+            <Image
+              src="/placeholder.svg?height=400&width=800&text=わらび餅ドリンク"
+              alt="わらび餅ドリンク物販"
+              fill
+              className="object-cover"
             />
           </div>
 
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle className="text-3xl font-bold text-center">わらび餅</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="flex items-center gap-4 text-lg">
-                <Clock className="h-5 w-5 text-blue-600" />
-                <span>11:00 - 16:00</span>
+          <div className="p-6 md:p-8">
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="px-3 py-1 bg-orange-100 text-orange-800 text-sm font-medium rounded-full">物販</span>
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">ドリンク</span>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">わらび餅ドリンク物販</h1>
+
+            <div className="prose max-w-none">
+              <h2 className="text-2xl font-semibold mb-4">商品概要</h2>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                ひんやり美味しいわらび餅と、様々なドリンクをご用意！ 手作りのぷるぷるわらび餅と、厳選したドリンクで、
+                キャンフェスでの暑さを吹き飛ばしましょう。
+              </p>
+
+              <h2 className="text-2xl font-semibold mb-4">詳細情報</h2>
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">販売時間</h3>
+                  <p className="text-gray-700">11:30 - 17:00</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">場所</h3>
+                  <p className="text-gray-700">中庭テント</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">価格</h3>
+                  <p className="text-gray-700">200円〜400円</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">数量</h3>
+                  <p className="text-gray-700">わらび餅150個、ドリンク200杯</p>
+                </div>
               </div>
 
-              <div className="flex items-center gap-4 text-lg">
-                <MapPin className="h-5 w-5 text-blue-600" />
-                <span>和菓子コーナー</span>
+              <h2 className="text-2xl font-semibold mb-4">わらび餅メニュー</h2>
+              <div className="grid md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">きなこわらび餅</h3>
+                  <p className="text-gray-700 text-sm mb-2">250円</p>
+                  <p className="text-gray-600 text-sm">香ばしいきなこをたっぷりと</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">黒蜜わらび餅</h3>
+                  <p className="text-gray-700 text-sm mb-2">280円</p>
+                  <p className="text-gray-600 text-sm">濃厚な黒蜜の甘さが絶品</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">抹茶わらび餅</h3>
+                  <p className="text-gray-700 text-sm mb-2">300円</p>
+                  <p className="text-gray-600 text-sm">上品な抹茶の風味</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">ミックスわらび餅</h3>
+                  <p className="text-gray-700 text-sm mb-2">350円</p>
+                  <p className="text-gray-600 text-sm">3種類の味が楽しめる</p>
+                </div>
               </div>
 
-              <div className="flex items-center gap-4 text-lg">
-                <Yen className="h-5 w-5 text-blue-600" />
-                <span>200円</span>
+              <h2 className="text-2xl font-semibold mb-4">ドリンクメニュー</h2>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">緑茶</h3>
+                  <p className="text-gray-700 text-sm mb-2">200円</p>
+                  <p className="text-gray-600 text-sm">さっぱりとした味わい</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">ほうじ茶</h3>
+                  <p className="text-gray-700 text-sm mb-2">200円</p>
+                  <p className="text-gray-600 text-sm">香ばしい香りが自慢</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">抹茶ラテ</h3>
+                  <p className="text-gray-700 text-sm mb-2">350円</p>
+                  <p className="text-gray-600 text-sm">クリーミーな抹茶ラテ</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">アイスコーヒー</h3>
+                  <p className="text-gray-700 text-sm mb-2">250円</p>
+                  <p className="text-gray-600 text-sm">すっきりとした苦味</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">レモネード</h3>
+                  <p className="text-gray-700 text-sm mb-2">300円</p>
+                  <p className="text-gray-600 text-sm">爽やかな酸味が人気</p>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="font-semibold mb-2">オリジナルブレンド茶</h3>
+                  <p className="text-gray-700 text-sm mb-2">400円</p>
+                  <p className="text-gray-600 text-sm">当店限定の特別ブレンド</p>
+                </div>
               </div>
 
-              <div className="flex items-center gap-4 text-lg">
-                <Users className="h-5 w-5 text-blue-600" />
-                <span>どなたでも</span>
+              <h2 className="text-2xl font-semibold mb-4">こだわりポイント</h2>
+              <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                <li>わらび餅は当日朝に手作り</li>
+                <li>本わらび粉を使用した本格的な味</li>
+                <li>ドリンクは厳選した茶葉を使用</li>
+                <li>氷は純水を使用したこだわりの氷</li>
+                <li>容器は環境に配慮した紙コップを使用</li>
+              </ul>
+
+              <h2 className="text-2xl font-semibold mb-4">セット商品</h2>
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mb-6">
+                <h3 className="font-semibold mb-4">わらび餅＋ドリンクセット</h3>
+                <p className="text-gray-700 mb-2">お好きなわらび餅＋お好きなドリンク</p>
+                <p className="text-lg font-semibold text-green-600">通常価格より50円お得！</p>
               </div>
 
-              <div className="prose max-w-none">
-                <h3 className="text-xl font-semibold mb-3">企画について</h3>
+              <h2 className="text-2xl font-semibold mb-4">物販チームからのメッセージ</h2>
+              <div className="bg-green-50 p-6 rounded-lg">
                 <p className="text-gray-700 leading-relaxed">
-                  手作りの美味しいわらび餅をご提供します。 ぷるぷるとした食感と上品な甘さが自慢の
-                  本格的なわらび餅です。きな粉と黒蜜で お召し上がりください。
+                  わらび餅ドリンク物販チームでは、伝統的な和のスイーツと、 こだわりのドリンクで皆様をおもてなしします。
+                  手作りのわらび餅のぷるぷる食感と、厳選したドリンクの組み合わせを
+                  ぜひお楽しみください。暑い日にぴったりの涼しげなメニューをご用意してお待ちしております！
                 </p>
-
-                <h3 className="text-xl font-semibold mb-3 mt-6">商品詳細</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>本わらび粉使用の本格わらび餅</li>
-                  <li>きな粉と黒蜜付き</li>
-                  <li>1パック6個入り</li>
-                  <li>その場でお召し上がりいただけます</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold mb-3 mt-6">こだわり</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>厳選した本わらび粉を使用</li>
-                  <li>職人による手作り製法</li>
-                  <li>添加物を使わない自然な味</li>
-                  <li>作りたての美味しさをお届け</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold mb-3 mt-6">販売時間</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>11:00 第1回販売開始</li>
-                  <li>13:00 第2回販売開始</li>
-                  <li>15:00 第3回販売開始</li>
-                  <li>各回限定50パック</li>
-                </ul>
-
-                <h3 className="text-xl font-semibold mb-3 mt-6">注意事項</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>売り切れ次第終了となります</li>
-                  <li>現金のみの取り扱いです</li>
-                  <li>アレルギーをお持ちの方は事前にお申し出ください</li>
-                  <li>お持ち帰りの場合は早めにお召し上がりください</li>
-                </ul>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
