@@ -50,6 +50,7 @@ export default function SeniorBandPage() {
                   </li>
                   <li>
                     <strong>場所:</strong> ステージ
+                  </li>
                 </ul>
               </div>
             </div>
