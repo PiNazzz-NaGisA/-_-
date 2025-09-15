@@ -63,7 +63,7 @@ export default function PhotoboothPage() {
                     <strong>参加費:</strong> チケット一枚 100円
                   </li>
                   <li>
-                    <strong>対象:</strong> どなたでも参加可能
+                    <strong>チケット販売場所:</strong>キャンパス入り口にて販売中(数に限りがございます。)
                   </li>
                 </ul>
               </div>
