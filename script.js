@@ -1,150 +1,108 @@
-document.addEventListener('DOMContentLoaded\', () => \{
-    // スムーズスクロールの実装\
-    document.querySelectorAll('a.nav-link').forEach(anchor => \{\
-        anchor.addEventListener(\'click', function (e) \{
-            e.preventDefault()
-\
-const targetId = this.getAttribute("href")
-const targetElement = document.querySelector(targetId)
+document.addEventListener("DOMContentLoaded", () => {
+  // Smooth scrolling for navigation links
+  document.querySelectorAll("a.nav-link").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault()
+      const targetId = this.getAttribute("href")
+      const targetElement = document.querySelector(targetId)
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - document.querySelector(".header").offsetHeight, // Adjust for fixed header
+          behavior: "smooth",
+        })
+      }
+      // Close mobile menu if open
+      const mobileMenu = document.querySelector(".mobile-menu-overlay")
+      if (mobileMenu && mobileMenu.classList.contains("is-open")) {
+        mobileMenu.classList.remove("is-open")
+      }
+    })
+  })
 
-if (targetElement)
-\
-{
-  // モバイルメニューが開いている場合は閉じる
-  const mobileMenu = document.querySelector(".mobile-menu-overlay")
-  if (mobileMenu && mobileMenu.classList.contains('is-open'))
-  \
-  mobileMenu.classList.remove("is-open")
-  \
+  // Mobile menu toggle
+  const menuToggle = document.querySelector(".menu-toggle")
+  const menuClose = document.querySelector(".menu-close")
+  const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay")
 
-  // ヘッダーの高さ分スクロール位置を調整
-  const headerHeight = document.querySelector(".header").offsetHeight
-  const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+      mobileMenuOverlay.classList.add("is-open")
+    })
+  }
 
-  window.scrollTo(\{
-                    top: targetPosition,
-                    behavior: 'smooth'\
-                \})
-  \
-}
-\})
-\})
+  if (menuClose) {
+    menuClose.addEventListener("click", () => {
+      mobileMenuOverlay.classList.remove("is-open")
+    })
+  }
 
-// モバイルメニューの開閉\
-const menuToggle = document.querySelector(".menu-toggle")
-const menuClose = document.querySelector(".menu-close")
-const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay")
+  // Close mobile menu when clicking outside (optional, but good UX)
+  if (mobileMenuOverlay) {
+    mobileMenuOverlay.addEventListener("click", (e) => {
+      if (e.target === mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove("is-open")
+      }
+    })
+  }
 
-if (menuToggle)
-\
-{
-  menuToggle.addEventListener('click', () => \{
-            mobileMenuOverlay.classList.add('is-open');
-  \
-}
-)
-\}
+  // Fetch events data (example of interacting with a backend API)
+  async function fetchEvents() {
+    const eventsListDiv = document.getElementById("events-list")
+    if (!eventsListDiv) return
 
-if (menuClose)
-\
-{
-  \
-        menuClose.addEventListener('click\', () => \{\
-            mobileMenuOverlay.classList.remove('is-open');
-        \
-}
-)
-\}
+    try {
+      // Assuming /api/events is still running as a Next.js API route or similar backend
+      const response = await fetch("/api/events")
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const events = await response.json()
 
-// APIからイベントデータを取得して表示する例
-const eventsListContainer = document.getElementById(\'events-list')
-\
-if (eventsListContainer)
-\
-{
-  fetch('/api/events')
-            .then(response => \{
-                if (!response.ok) \{\
-                    throw new Error(`HTTP error! status: $\{response.status\}`);
-  \
-}
-\
-return response.json();
-\
-            \})\
-            .then(data => \
-{
-  \
-  if (data && data.events && data.events.length > 0)
-  \
-  eventsListContainer.innerHTML = "" // ローディングメッセージをクリア
-  data.events.forEach(event => \{
-                        const eventItem = document.createElement('div');
-  eventItem.className = "event-item"
-  eventItem.innerHTML = `\
-                            <h3>$\{event.name\}</h3>\
-                            <p>日時: $\{event.date\} $\{event.time\}</p>
-                            <p>場所: $\{event.location\}</p>
-                            <p>$\{event.description\}</p>
-                        `
-  eventsListContainer.appendChild(eventItem)
-  \
-  )
-  \
-}
-else \
-{
-  eventsListContainer.innerHTML = "<p>イベント情報がありません。</p>"
-  \
-}
-\})
-            .catch(error => \
-{
-  \
-                console.error(\'イベントデータの取得に失敗しました:', error)
-  eventsListContainer.innerHTML = "<p>イベント情報の読み込み中にエラーが発生しました。</p>"
-  \
-}
-)
-\}
+      if (events.length > 0) {
+        eventsListDiv.innerHTML =
+          "<h3>開催イベント一覧:</h3><ul>" +
+          events.map((event) => `<li>${event.name} - ${event.date} (${event.time})</li>`).join("") +
+          "</ul>"
+      } else {
+        eventsListDiv.innerHTML = "<p>現在、開催予定のイベントはありません。</p>"
+      }
+    } catch (error) {
+      console.error("イベントデータの取得に失敗しました:", error)
+      eventsListDiv.innerHTML = "<p>イベント情報の読み込み中にエラーが発生しました。</p>"
+    }
+  }
 
-// お問い合わせフォームの送信処理（例）
-const contactForm = document.querySelector(".contact-form")
-if (contactForm)
-\
-{
-  contactForm.addEventListener('submit', function(e) \{
-            e.preventDefault() // デフォルトのフォーム送信を防止
+  fetchEvents()
 
-  const formData = new FormData(contactForm)
-  \
-  const data = Object.fromEntries(formData.entries())
+  // Handle contact form submission (example)
+  const contactForm = document.querySelector(".contact-form")
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault()
 
-  fetch('/api/contact', \{
-                method: 'POST',
-                headers: \{
-                    'Content-Type': 'application/json',\
-                \},\
-                body: JSON.stringify(data),
-            \})
-            .then(response => response.json())
-            .then(result => \{
-                alert(result.message || 'お問い合わせが送信されました。');
-  \
-                contactForm.reset() // フォームをリセット
-  \
-}
-)\
-            .catch(error => \
-{
-  \
-                console.error('お問い合わせ送信エラー:', error)
-  \
-                alert(\'お問い合わせの送信に失敗しました。')
-  \
-            \
-}
-)
-\})
-\}
-\})
+      const formData = new FormData(contactForm)
+      const data = Object.fromEntries(formData.entries())
+
+      try {
+        // Assuming /api/contact is still running as a Next.js API route or similar backend
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+
+        if (response.ok) {
+          alert("お問い合わせが正常に送信されました。")
+          contactForm.reset()
+        } else {
+          alert("お問い合わせの送信に失敗しました。")
+        }
+      } catch (error) {
+        console.error("フォーム送信エラー:", error)
+        alert("お問い合わせの送信中にエラーが発生しました。")
+      }
+    })
+  }
+})

@@ -1,64 +1,119 @@
-import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
+import { ContentSection } from "@/components/content-section"
 import { ThemeSection } from "@/components/theme-section"
 import { PickupSection } from "@/components/pickup-section"
-import { ContentSection } from "@/components/content-section"
 import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
+import { CalendarIcon, ClockIcon, MapPinIcon, TicketIcon } from "lucide-react"
+import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
-      <main className="flex-1 max-w-screen-xl mx-auto w-full">
-        {" "}
-        {/* ここにmax-w-screen-xlとmx-autoを追加 */}
-        {/* キャンフェスサイトのメインタイトル */}
-        <HeroSection />
-        {/* 今年のテーマ */}
-        <ThemeSection />
-        {/* 開催概要と開催日時 */}
-        <ContentSection id="overview" title="開催概要" className="bg-white shadow-sm rounded-lg mx-4 my-8">
-          <p className="text-center text-xl font-medium">
-            2025年9月20日(土)
-            <br />
-            オープニング12:00(開場11:30)
-            <br />
-            ＠N/S/R高福岡薬院キャンパス
-          </p>
-        </ContentSection>
-        <ContentSection id="about" title="キャンフェスとは" className="bg-gray-50 shadow-sm rounded-lg mx-4 my-8">
-          <p>
-            いるか知らんけどなんか書いていいんじゃない？文言は偉い人に考えて書いてもううとか？
-            キャンフェスは、学生たちが日頃の成果を発表し、来場者と共に楽しむことができる年に一度の祭典です。
-            様々な企画や展示、ステージパフォーマンスを通じて、学生と地域社会の交流を深めることを目的としています。
-            今年は「福岡薬院万博」をテーマに、未来への希望と創造性を表現します。
-          </p>
-        </ContentSection>
-        <PickupSection />
-        <ContentSection
-          id="timetable"
-          title="ステージタイムテーブル"
-          className="bg-white shadow-sm rounded-lg mx-4 my-8"
-        >
-          <p className="text-center text-lg">タイムテーブル作れ</p>
-          <div className="mt-6 p-4 border border-dashed border-gray-300 rounded-md text-center text-gray-500">
-            <p>ステージのタイムテーブルは現在調整中です。</p>
-            <p>詳細が決まり次第、こちらで公開いたしますので、今しばらくお待ちください。</p>
+      <HeroSection />
+
+      {/* 開催概要セクション */}
+      <section id="overview" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-8 mb-8">
+            <div className="w-60 h-60 flex-shrink-0">
+              <Image
+                src="/canfes-myakumyaku.png"
+                alt="キャンフェスミャクミャク"
+                width={240}
+                height={240}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="text-center">
+              <h2 className="text-3xl font-bold mb-8">開催概要</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
+                  <CalendarIcon className="h-6 w-6 text-blue-600" />
+                  <div>
+                    <p className="font-semibold">開催日</p>
+                    <p className="text-gray-600">2025年9月20日（土）</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
+                  <ClockIcon className="h-6 w-6 text-blue-600" />
+                  <div>
+                    <p className="font-semibold">開催時間</p>
+                    <p className="text-gray-600">12:00 ~ 15:30</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
+                  <MapPinIcon className="h-6 w-6 text-blue-600" />
+                  <div>
+                    <p className="font-semibold">会場</p>
+                    <p className="text-gray-600">福岡薬院キャンパス</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
+                  <TicketIcon className="h-6 w-6 text-blue-600" />
+                  <div>
+                    <p className="font-semibold">入場料</p>
+                    <p className="text-gray-600">無料</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-60 h-60 flex-shrink-0">
+              <Image
+                src="/canfes-flag-girl.png"
+                alt="キャンフェス旗少女"
+                width={240}
+                height={240}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
-        </ContentSection>
-        <ContentSection id="precautions" title="注意事項" className="bg-gray-50 shadow-sm rounded-lg mx-4 my-8">
-          <ul className="list-disc list-inside">
-            <li>駐車場のご用意がございません、近隣のコインパーキングや公共交通機関をご利用ください。</li>
-            <li>会場内での喫煙はご遠慮ください。</li>
-            <li>ゴミは指定の場所に分別して捨ててください。</li>
-            <li>ペットの同伴はご遠慮ください（盲導犬、介助犬を除く）。</li>
-            <li>会場内での飲食物の持ち込みは一部制限がございます。</li>
-            <li>貴重品の管理は各自でお願いいたします。</li>
-            <li>イベント内容は予告なく変更される場合がございます。</li>
-          </ul>
-          <p className="text-sm text-gray-600 mt-4">※注意事項は要確認</p>
-        </ContentSection>
-      </main>
+        </div>
+      </section>
+
+      {/* ステージタイムテーブル */}
+      <section id="timetable" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">ステージタイムテーブル</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-lg">
+                <div className="text-lg font-semibold text-blue-600 min-w-[140px]">12:00 ~ 12:15</div>
+                <div className="text-lg">オープニング</div>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-lg font-semibold text-gray-600 min-w-[140px]">12:15 ~ 12:45</div>
+                <div className="text-lg">NED in 福岡薬院万博2025</div>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-lg">
+                <div className="text-lg font-semibold text-blue-600 min-w-[140px]">12:45 ~ 13:35</div>
+                <div className="text-lg">コミュニケーションサークル発表</div>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-lg font-semibold text-gray-600 min-w-[140px]">13:35 ~ 14:05</div>
+                <div className="text-lg">第一回福岡薬院クイズ王決定戦</div>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-lg">
+                <div className="text-lg font-semibold text-blue-600 min-w-[140px]">14:05 ~ 14:35</div>
+                <div className="text-lg">カラオケ大会 ~ in 福岡薬院 ~</div>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
+                <div className="text-lg font-semibold text-gray-600 min-w-[140px]">14:35 ~ 15:20</div>
+                <div className="text-lg">薬院老人会によるバンド演奏</div>
+              </div>
+              <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-lg">
+                <div className="text-lg font-semibold text-blue-600 min-w-[140px]">15:20 ~ 15:30</div>
+                <div className="text-lg">エンディング</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ThemeSection />
+      <ContentSection />
+      <PickupSection />
       <Footer />
     </div>
   )

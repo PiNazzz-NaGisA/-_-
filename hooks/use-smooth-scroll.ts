@@ -4,28 +4,32 @@ import { useEffect } from "react"
 
 export function useSmoothScroll() {
   useEffect(() => {
-    const handleAnchorClick = (e: MouseEvent) => {
+    const handleAnchorClick = (e: Event) => {
       const target = e.target as HTMLAnchorElement
-      if (target.tagName === "A" && target.getAttribute("href")?.startsWith("#")) {
-        e.preventDefault()
+      if (target.tagName === "A" && target.href.includes("#")) {
         const href = target.getAttribute("href")
-        if (href) {
-          const element = document.querySelector(href)
-          if (element) {
-            const offset = 60 // Adjust this value based on your fixed header height
-            window.scrollTo({
-              top: element.getBoundingClientRect().top + window.scrollY - offset,
+        if (!href || href.length <= 1 || href === "#") {
+          return
+        }
+
+        try {
+          const targetId = href.substring(1)
+          const targetElement = document.querySelector(`#${targetId}`)
+
+          if (targetElement) {
+            e.preventDefault()
+            targetElement.scrollIntoView({
               behavior: "smooth",
+              block: "start",
             })
           }
+        } catch (error) {
+          console.warn("Invalid selector:", href)
         }
       }
     }
 
     document.addEventListener("click", handleAnchorClick)
-
-    return () => {
-      document.removeEventListener("click", handleAnchorClick)
-    }
+    return () => document.removeEventListener("click", handleAnchorClick)
   }, [])
 }
