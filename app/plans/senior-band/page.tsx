@@ -30,14 +30,14 @@ export default function SeniorBandPage() {
 
           <CardHeader>
             <CardTitle className="text-3xl font-bold">薬院老人会によるバンド演奏</CardTitle>
-            <p className="text-lg text-gray-600">地域の薬院老人会による心温まるバンド演奏をお楽しみください！</p>
+            <p className="text-lg text-gray-600">薬院老人会によるバンド演奏！</p>
           </CardHeader>
 
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                地域の薬院老人会の皆さんによる特別なバンド演奏です！ぜひお気軽にご参加ください！
+                グリーンホットハラペーニョ！！！！！！！！！！！！！
               </p>
             </div>
 
