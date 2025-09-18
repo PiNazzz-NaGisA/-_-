@@ -47,7 +47,7 @@ export default function Home() {
                   <MapPinIcon className="h-5 w-5 md:h-6 md:w-6 text-blue-600 flex-shrink-0" />
                   <div className="text-left">
                     <p className="font-semibold text-sm md:text-base">会場</p>
-                    <p className="text-gray-600 text-sm md:text-base">福岡薬院キャンパス</p>
+                    <p className="text-gray-600 text-sm md:text-base">小学館ビル7階:福岡薬院キャンパス</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-white p-3 md:p-4 rounded-lg shadow-sm">
