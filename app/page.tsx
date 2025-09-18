@@ -84,22 +84,30 @@ export default function Home() {
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-gray-50 rounded-lg">
                 <div className="text-base md:text-lg font-semibold text-gray-600 sm:min-w-[140px]">12:15 ~ 12:45</div>
-                <div className="text-base md:text-lg">NED in 福岡薬院万博2025</div>
+                <div className="text-base md:text-lg">NED in 福岡薬院万博(プレゼン部門)</div>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-blue-50 rounded-lg">
-                <div className="text-base md:text-lg font-semibold text-blue-600 sm:min-w-[140px]">12:45 ~ 13:35</div>
+                <div className="text-base md:text-lg font-semibold text-blue-600 sm:min-w-[140px]">12:45 ~ 13:15</div>
+                <div className="text-base md:text-lg">NED in 福岡薬院万博(カラオケ部門)</div>
+              </div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-gray-50 rounded-lg">
+                <div className="text-base md:text-lg font-semibold text-gray-600 sm:min-w-[140px]">13:15 ~ 13:35</div>
                 <div className="text-base md:text-lg">コミュニケーションサークル発表</div>
               </div>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-gray-50 rounded-lg">
-                <div className="text-base md:text-lg font-semibold text-gray-600 sm:min-w-[140px]">13:35 ~ 14:05</div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-blue-50 rounded-lg">
+                <div className="text-base md:text-lg font-semibold text-blue-600 sm:min-w-[140px]">13:35 ~ 14:05</div>
                 <div className="text-base md:text-lg">第一回福岡薬院クイズ王決定戦</div>
               </div>
-              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-blue-50 rounded-lg">
-                <div className="text-base md:text-lg font-semibold text-blue-600 sm:min-w-[140px]">14:05 ~ 14:35</div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-gray-50 rounded-lg">
+                <div className="text-base md:text-lg font-semibold text-gray-600 sm:min-w-[140px]">14:05 ~ 14:35</div>
                 <div className="text-base md:text-lg">カラオケ大会 ~ in 福岡薬院 ~</div>
               </div>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-blue-50 rounded-lg">
+                <div className="text-base md:text-lg font-semibold text-blue-600 sm:min-w-[140px]">14:35 ~ 14:45</div>
+                <div className="text-base md:text-lg">倉本さんのお悩み相談会</div>
+              </div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-gray-50 rounded-lg">
-                <div className="text-base md:text-lg font-semibold text-gray-600 sm:min-w-[140px]">14:35 ~ 15:20</div>
+                <div className="text-base md:text-lg font-semibold text-gray-600 sm:min-w-[140px]">14:45 ~ 15:20</div>
                 <div className="text-base md:text-lg">薬院老人会によるバンド演奏</div>
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 p-3 md:p-4 bg-blue-50 rounded-lg">

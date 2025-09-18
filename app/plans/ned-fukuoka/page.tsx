@@ -20,7 +20,7 @@ export default function NedFukuokaPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=NED+in+福岡薬院万博2025"
+              src="/ned-fukuoka-expo.jpg"
               alt="NED in 福岡薬院万博2025"
               width={800}
               height={400}
@@ -37,9 +37,11 @@ export default function NedFukuokaPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                この企画では、参加者が"推し"や"好きなこと""自分の体験"などを語る「スピーチ部門」と、
-                即興でお題に応える「スキル部門」で、プレゼン力をぶつけ合います！
-                あたたかい応援とリアクションで盛り上げてください！！
+                今年も開催、NED in 福岡薬院！
+                今年は保護者の方や卒業生のみなさんも見守る、少しレベルアップしたステージです。
+                探求部門では、それぞれの好きなことや経験を自由に語ってもらいます。
+                そしてスキル部門では、即興プレゼンで観客を魅了していただきます。
+                今回は、1年生と前回王者の戦いも予定されています。どんな展開になるのか、ぜひご注目ください！
               </p>
             </div>
 
@@ -48,7 +50,7 @@ export default function NedFukuokaPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:15 ~ 12:45
+                    <strong>開催時間:</strong> (プレゼン部門)12:15 ~ 12:45 (カラオケ部門)12:45 ~ 13:15
                   </li>
                   <li>
                     <strong>場所:</strong> ステージ

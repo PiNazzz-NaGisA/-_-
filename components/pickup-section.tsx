@@ -60,7 +60,7 @@ export function PickupSection() {
     {
       title: "NED in 福岡薬院万博2025",
       description: "特別企画",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/ned-fukuoka-expo.jpg",
       tags: ["特別企画", "地域交流"],
       href: "/plans/ned-fukuoka",
     },
@@ -70,13 +70,6 @@ export function PickupSection() {
       image: "/placeholder.svg?height=200&width=300",
       tags: ["発表", "コミュニケーション"],
       href: "/plans/communication-circle",
-    },
-    {
-      title: "倉本さんのお悩み相談室",
-      description: "相談・交流",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["相談", "交流", "人生"],
-      href: "/plans/kuramoto-consultation",
     },
     {
       title: "第1回福岡薬院クイズ王決定戦",
@@ -91,6 +84,13 @@ export function PickupSection() {
       image: "/placeholder.svg?height=200&width=300",
       tags: ["音楽", "大会", "エンタメ"],
       href: "/plans/karaoke-contest",
+    },
+    {
+      title: "倉本さんのお悩み相談室",
+      description: "相談・交流",
+      image: "/placeholder.svg?height=200&width=300",
+      tags: ["相談", "交流", "人生"],
+      href: "/plans/kuramoto-consultation",
     },
     {
       title: "薬院老人会によるバンド演奏",
