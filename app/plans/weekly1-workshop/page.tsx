@@ -20,7 +20,7 @@ export default function FloraPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=FLOLA（フローラ）"
+              src="/flola-floating-frame-image.jpg"
               alt="FLOLA（フローラ）"
               width={800}
               height={400}
@@ -49,7 +49,7 @@ export default function FloraPage() {
               <div className="bg-blue-50 p-4 rounded-lg">
                 <ul className="space-y-2">
                   <li>
-                    <strong>開催時間:</strong> 12:15 ~ 14:50 
+                    <strong>開催時間:</strong> 12:15 ~ 14:50
                   </li>
                   <li>
                     <strong>場所:</strong> ステージ右横

@@ -20,7 +20,7 @@ export default function FoodPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=もちパンカフェ"
+              src="/mochi-pan-cafe-image.png"
               alt="もちパンカフェ"
               width={800}
               height={400}

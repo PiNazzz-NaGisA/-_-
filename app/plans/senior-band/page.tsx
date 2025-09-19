@@ -20,7 +20,7 @@ export default function SeniorBandPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=薬院老人会バンド演奏"
+              src="/senior-band-image.jpg"
               alt="薬院老人会によるバンド演奏"
               width={800}
               height={400}
@@ -36,9 +36,7 @@ export default function SeniorBandPage() {
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
-              <p className="text-gray-700 leading-relaxed">
-                グリーンホットハラペーニョ！！！！！！！！！！！！！
-              </p>
+              <p className="text-gray-700 leading-relaxed">グリーンホットハラペーニョ！！！！！！！！！！！！！</p>
             </div>
 
             <div>

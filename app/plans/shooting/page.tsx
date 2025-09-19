@@ -20,7 +20,7 @@ export default function ShootingPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=射的"
+              src="/shateki-image.png"
               alt="射的"
               width={800}
               height={400}

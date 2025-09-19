@@ -20,7 +20,7 @@ export default function QuizContestPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=クイズ王決定戦"
+              src="/quiz-contest-image.jpg"
               alt="第1回福岡薬院クイズ王決定戦"
               width={800}
               height={400}
@@ -52,8 +52,7 @@ export default function QuizContestPage() {
                   <li>
                     <strong>場所:</strong> ステージ
                   </li>
-                  <li>
-                  </li>
+                  <li></li>
                 </ul>
               </div>
             </div>

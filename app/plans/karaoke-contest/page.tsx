@@ -20,7 +20,7 @@ export default function KaraokeContestPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=カラオケ大会"
+              src="/karaoke-contest-image.jpg"
               alt="カラオケ大会 ~ in 福岡薬院 ~"
               width={800}
               height={400}

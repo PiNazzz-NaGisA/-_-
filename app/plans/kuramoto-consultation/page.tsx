@@ -20,7 +20,7 @@ export default function KuramotoConsultationPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=倉本さんのお悩み相談室"
+              src="/kuramoto-consultation-image.png"
               alt="倉本さんのお悩み相談室"
               width={800}
               height={400}
@@ -55,7 +55,6 @@ export default function KuramotoConsultationPage() {
                   <li>
                     <strong>場所:</strong> ステージ
                   </li>
-
                 </ul>
               </div>
             </div>

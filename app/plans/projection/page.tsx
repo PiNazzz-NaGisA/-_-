@@ -20,7 +20,7 @@ export default function ProjectionPage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=プロジェクションマッピングin夏の思い出"
+              src="/projection-mapping-image.jpg"
               alt="プロジェクションマッピングin夏の思い出"
               width={800}
               height={400}

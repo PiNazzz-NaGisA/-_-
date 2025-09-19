@@ -20,7 +20,7 @@ export default function CommunicationCirclePage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=コミュニケーションサークル発表"
+              src="/communication-circle-image.jpg"
               alt="コミュニケーションサークル発表"
               width={800}
               height={400}
