@@ -50,7 +50,7 @@ export function PickupSection() {
     {
       title: "爆破しうる潜水艇からの脱出",
       description: "脱出ゲーム",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/submarine-escape-image.jpg",
       tags: ["脱出ゲーム", "謎解き", "チームワーク"],
       href: "/plans/submarine-escape",
     },

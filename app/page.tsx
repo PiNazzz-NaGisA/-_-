@@ -122,6 +122,70 @@ export default function Home() {
       <ThemeSection />
       <ContentSection />
       <PickupSection />
+
+      {/* キャンパス内での注意事項 */}
+      <section className="py-12 md:py-16 bg-red-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-red-800">
+            キャンパス内での注意事項
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-6 md:p-8 rounded-lg shadow-sm border-l-4 border-red-500">
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    1
+                  </span>
+                  <span className="text-sm md:text-base">
+                    安全管理上、入場には事前招待フォームのご提出・身分証明証のご提示が必須です。
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    2
+                  </span>
+                  <span className="text-sm md:text-base">
+                    来場中はネームストラップを必ずご着用いただき、帰宅時は受付にご返却ください。
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    3
+                  </span>
+                  <span className="text-sm md:text-base">他の階のトイレや自販機利用はご遠慮ください。</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    4
+                  </span>
+                  <span className="text-sm md:text-base">
+                    チケットは中教室でお買い求めの上、各企画・物販をお楽しみください。
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    5
+                  </span>
+                  <span className="text-sm md:text-base">飲食物のお持ち込みは可能です。</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    6
+                  </span>
+                  <span className="text-sm md:text-base">販売する飲食物のお持ち帰りは衛生管理上、ご遠慮ください。</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    7
+                  </span>
+                  <span className="text-sm md:text-base">ゴミの分別にご協力をお願いいたします。</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   )

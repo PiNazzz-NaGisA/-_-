@@ -20,7 +20,7 @@ export default function SubmarineEscapePage() {
         <Card className="max-w-4xl mx-auto">
           <div className="aspect-video bg-gray-200 rounded-t-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=400&width=800&text=潜水艇脱出ゲーム"
+              src="/submarine-escape-image.jpg"
               alt="爆破しうる潜水艇からの脱出"
               width={800}
               height={400}
@@ -37,12 +37,9 @@ export default function SubmarineEscapePage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">企画概要</h3>
               <p className="text-gray-700 leading-relaxed">
-                『おめでとうございます！あなたは深海観光ツアーに当選しました！』
-                連絡を受け、潜水艇に乗るあなたたち。
-                深く潜ったそのとき、船内に突如アナウンスが響く。
-                「この船は10分後に爆発します。」
-                生き残るには、船に仕掛けられた爆弾を解除するしかない。
-                仲間と協力し、無事に帰ることはできるのか——
+                『おめでとうございます！あなたは深海観光ツアーに当選しました！』 連絡を受け、潜水艇に乗るあなたたち。
+                深く潜ったそのとき、船内に突如アナウンスが響く。 「この船は10分後に爆発します。」
+                生き残るには、船に仕掛けられた爆弾を解除するしかない。 仲間と協力し、無事に帰ることはできるのか——
               </p>
             </div>
 
@@ -73,7 +70,6 @@ export default function SubmarineEscapePage() {
                 教室全体を一つの潜水艇に見立て、没入感のある世界観を目指しました！参加者が物語の中に入り込めるように空間全体を作り込んでいます。
                 難易度も初心者の方でも楽しめるように設定しています。
                 謎解きが初めてでも、友達と協力すればきっとクリアできるはず。どなたでもお気軽にご参加ください！
-
               </p>
             </div>
           </CardContent>
