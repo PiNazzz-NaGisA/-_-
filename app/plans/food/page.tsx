@@ -57,7 +57,7 @@ export default function FoodPage() {
                     <strong>チケット価格:</strong> パンケーキ各種200円 , ドリンク各種400円
                   </li>
                   <li>
-                    <strong>チケット販売場所:</strong>キャンパス入り口にて販売中(数に限りがございます。)
+                    <strong>チケット販売場所:</strong> 中教室入り口にて販売中(数に限りがございます。)
                   </li>
                 </ul>
               </div>

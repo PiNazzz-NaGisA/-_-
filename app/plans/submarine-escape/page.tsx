@@ -57,7 +57,7 @@ export default function SubmarineEscapePage() {
                     <strong>チケット価格:</strong> 一枚300円
                   </li>
                   <li>
-                    <strong>チケット販売場所:</strong>キャンパス入り口にて販売中(数に限りがございます。)
+                    <strong>チケット販売場所:</strong> 中教室入り口にて販売中(数に限りがございます。)
                   </li>
                 </ul>
               </div>
